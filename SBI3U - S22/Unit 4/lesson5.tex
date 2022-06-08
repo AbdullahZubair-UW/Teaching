@@ -1,0 +1,163 @@
+% Prepared by Calvin Kent
+\documentclass[12pt,oneside]{book} %
+\usepackage{CKpreamble}
+\usepackage{CKlecture}
+\usepackage{mdframed}
+\usepackage{import}
+\usepackage{pdfpages}
+\usepackage{euscript}
+\usepackage{transparent}
+\usepackage{xcolor}
+
+\newcommand{\incfig}[2][1]{%
+    \def\svgwidth{#1\columnwidth}
+    \import{./figures/}{#2.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
+%
+\renewcommand*{\doctitle}{Class Based Lecture Notes}
+\makeatletter\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}\makeatother % only used in class based
+\begin{document}
+	% Start of Class settings
+	\renewcommand*{\term}{Term 2} % Term
+	\renewcommand*{\coursecode}{MCR3U} % Course code
+	\renewcommand*{\coursename}{Course Name} % Full course name
+	\renewcommand*{\thelecnum}{4} % Lecture number
+	\renewcommand*{\profname}{Prof Name} % Prof Name
+	\renewcommand*{\colink}{http://www.student.math.uwaterloo.ca/~c2kent} % Course outline link
+	% End of Class settings
+	\clearpage
+	\pagenumbering{arabic}
+	\pagestyle{classlecture}
+	%%% Note to user: CTRL + F <CHANGE ME:> (without the angular brackets) in CKpreamble to specify graphics paths accordingly.
+	%%% If a new chapter was started in the middle of a lecture, \fix chap{Second Chapter} must be used immediately above the next lecture.
+	% Course notes start
+\setchap{5}{Anamniotes (\textit{Additional notes})}
+\begin{lec}{March 20222}
+	\chapter{\chapname\chaplec}
+
+  \textbf{Embryo:} An organism in its early development stage.\\
+  
+  \textbf{Amnion:} A thin transparent fluid in which the embryo is enclosed and suspended whilst being cushioned by its
+  surroundings.\\
+
+  \textbf{Anamniotes} are a group composed of fish and amphibians whose embryos are \textbf{not} enclosed by an amnion.
+
+  As a consequence, anamniotes must lay their eggs in water, otherwise their eggs would dry out.\\
+
+  \section{Fish}
+  Characteristics of fish,
+  \begin{itemize}
+    \item Water Habitat.
+    \item Breathe underwater using their \textbf{gills} by a method of gas exchange with water to extract oxygen atoms.
+    \item Fins at the \textbf{top and sides} for assistance in motion and stability.
+    \item Some fish are equipped with a \textbf{air bladder} which helps them remain afloat and maintain a stable buoyancy 
+  \end{itemize}
+  The three main classes of fish are,
+  \begin{itemize}
+    \item Agnatha.
+    \item Chondrichthyes
+    \item Osteopathy's.
+  \end{itemize}
+
+  \newpage
+
+  \section{Amphibians}
+  Characteristics of amphibians,
+  \begin{itemize}
+    \item Young/larval stages in water, adult stages in land.
+    \item \textit{Mostly} fertilize externally (Eggs fertilized by sperm cells).
+    \item Must undergo a process of \textbf{metamorphosis} in order to develop organs to enable the transition to a
+    terrestrial environment. Necessary organs include,
+    \begin{itemize}
+      \item Limbs, to allow manoeuvrability.
+      \item Eyes to enable vision on land.
+      \item Lungs to enable breathing methods on terrestrial land. (Gas exchange with air not water) (They also breathe
+      through their skin)
+    \end{itemize}
+      \item Must keep their bodies moist/wet and hence occupy near to a water source.
+      \item Hibernate in colder months.
+  \end{itemize}
+
+  Main groups of amphibians,
+  \begin{itemize}
+    \item Ochthyostegalia.
+    \item Anura.
+    \item Urodela.
+    \item Apoda.
+  \end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  
+
+
+
+  
+
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	\end{lec}
+
+\end{document}
+

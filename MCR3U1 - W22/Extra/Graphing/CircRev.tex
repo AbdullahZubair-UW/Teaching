@@ -1,0 +1,139 @@
+
+
+
+% Prepared by Calvin Kent
+%
+% Assignment Template v19.02
+%
+%%% 20xx0x/MATHxxx/Crowdmark/Ax
+%
+\documentclass[12pt]{article} %
+\usepackage{amsthm}
+\usepackage{CKpreamble}
+\usepackage{CKassignment}
+\usepackage{mdframed}
+\usepackage{import}
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{xcolor}
+
+\newcommand{\incfig}[2][1]{%
+    \def\svgwidth{#1\columnwidth}
+    \import{./figures/}{#2.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
+
+%
+\begin{document}
+	\pagenumbering{arabic}
+	% Start of class settings ...
+	\renewcommand*{\coursecode}{MATH 235} % renew course code
+	\renewcommand*{\assgnnumber}{Assignment 1} % renew assignment number
+	\renewcommand*{\submdate}{September 14, 2021} % renew the date
+	\renewcommand*{\studentfname}{Abdullah} % Student first name
+	\renewcommand*{\studentlname}{Zubair} % Student last name
+    \renewcommand*{\proofname}{Proof:}
+	% \renewcommand*{\studentnum}{20836288} % Student number
+
+	\renewcommand\qedsymbol{$\blacksquare$}
+	\setfigpath
+	% End of class settings	
+	% \pagestyle{crowdmark}
+	\newgeometry{left=18mm, right=18mm, top=22mm, bottom=22mm} % page is set to default values
+	\fancyhfoffset[L,O]{0pt} % header orientation fixed
+	% End of class settings
+	%%% Note to user:
+	% CTRL + F <CHANGE ME:> (without the angular brackets) in CKpreamble to specify graphics paths accordingly.
+	% The command \circled[]{} accepts one optional and one mandatory argument.
+	% Optional argument is for the size of the circle and mandatory argument is for its contents.
+	% \circled{A} produces circled A, with size drawn for letter A. \circled[TT]{A} produces circled A with size drawn for TT.
+	% https://github.com/CalvinKent/My-LaTeX
+	%%%
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%                        CUSTOM MACRO VIM-TEX                             %%%
+	%%       call IMAP('NOM', '\nomenclature{}', 'tex')               
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	% Crowdmark assignment start
+	% qnumber, qname, qpoints
+
+\begin{center}
+	\textbf{\underline{\Huge{How to Graph Circles}}}
+\end{center}
+
+	\vspace*{0.5cm}
+	Lets say we have the equation of a circle $(x-a)^2 + (y-b)^2 = r$ and we want to graph it, then preform the follwing,
+	\begin{enumerate}
+		\item Label the point $(a,b)$ on your graph. (FWI, this is the centre of the circle)
+		\item Starting from $(a,b)$, go to the \textbf{right} by $\sqrt{r} $ units, label the point.
+		\item Starting from $(a,b)$, go to the \textbf{left} by $\sqrt{r} $ units, label the point.
+		\item Starting from $(a,b)$, go to the \textbf{up} by $\sqrt{r} $ units, label the point.
+		\item Starting from $(a,b)$, go to the \textbf{up} by $\sqrt{r} $ units, label the point.
+		\item Conect the \textbf{four} points you have labled to form a circle.
+\end{enumerate}
+
+A couple of things to note,
+\begin{itemize}
+	\item $(a,b)$ represents the centre of the circle.
+	\item $\sqrt{r} $ represents the radius of the circle (not $r$).
+\end{itemize}
+
+\textbf{\underline{\Large{Practice Problems:}}}
+
+Double check your answers by using the graphing website \textbf{Desmos}.(Google it)
+
+\begin{qstn}
+	Graph the following cirlces.
+	\begin{enumerate}[label=(\alph*)]
+		\item $(x - 1)^2 + (y-2)^2 = 4$
+		\item $x^2 + (y-1)^2 = 9$
+		\item $(x+4)^2 + (y - 4)^2 = 1$
+		\item $x^2 + y^2 = 16$
+		\item $(x+2)^2 + (x+3)^2 = 25$
+	\end{enumerate}
+\end{qstn}
+
+\begin{qstn}
+	Write the equation of your favourite circle, then graph it.
+\end{qstn}
+
+\begin{qstn}
+	I am a circle with a radius of $2$. My centre is unknown (yikes\ldots). Here are some points that I lie upon,
+	\begin{itemize}
+		\item $(4,-4)$
+		\item $(2,-2)$
+	\end{itemize}
+	Help me find my \textbf{centre and my equation}.
+\end{qstn}
+
+
+
+\begin{qstn}
+	\textbf{(SUPER CHALLENGE)} Prove that 
+				\[
+					2y^2 + x^2 = 1
+				\] is not a circle.
+\end{qstn}
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

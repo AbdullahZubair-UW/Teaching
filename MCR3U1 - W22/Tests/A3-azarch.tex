@@ -1,0 +1,394 @@
+% Prepared by Calvin Kent
+%
+% Assignment Template v19.02
+%
+%%% 20xx0x/MATHxxx/Crowdmark/Ax
+%
+\documentclass[12pt]{article} %
+\usepackage{CKpreamble}
+\usepackage{CKassignment}
+\usepackage{tkz-euclide}
+\usepackage{physunits}
+\usepackage{physics}
+\usepackage{mathtools}
+\usepackage{multicol}
+\usepackage{lmodern}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{pdfpages}
+\usepackage{euscript}
+\usepackage{transparent}
+\usepackage{xcolor}
+\usepackage{tasks}
+\usepackage{tkz-euclide}
+
+\usepackage{pgfplots}
+\usepgfplotslibrary{polar}
+\usepgflibrary{shapes.geometric}
+\usetikzlibrary{calc}
+
+
+\usepackage{euscript}
+\usepackage{microtype}
+\usepackage{upgreek}
+\usepackage[misc]{ifsym}
+
+
+%%Title
+\title{\textbf{Assignment 3 Functions} \\ \textbf{Due Date: } Tuesday, Feburary 1}
+\date{}
+
+%%% Maths and science packages
+
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{pgfplots}
+	\usetikzlibrary{
+		calc,
+		patterns,
+		positioning
+	}
+	\pgfplotsset{
+		compat=1.16,
+		samples=200,
+		clip=false,
+		my axis style/.style={
+			axis x line=middle,
+			axis y line=middle,
+			legend pos=outer north east,
+			axis line style={
+				->,
+			},
+			legend style={
+				font=\footnotesize
+			},
+			label style={
+				font=\footnotesize
+			},
+			tick label style={
+				font=\footnotesize
+			},
+			xlabel style={
+				at={
+					(ticklabel* cs:1)
+				},
+				anchor=west,
+				font=\footnotesize,
+			},
+			ylabel style={
+				at={
+					(ticklabel* cs:1)
+				},
+				anchor=west,
+				font=\footnotesize,
+			},
+			xlabel= $x$,
+			ylabel=$\vec d (\m \tx{[East]})$
+		},
+	}
+	\tikzset{
+		>=stealth
+	}
+
+\pgfplotsset{my style/.append style={axis x line=middle, axis y line=
+middle, xlabel={$t$}, ylabel={$y[\text{m}]$}, axis equal }}
+
+%%% Tables and figures packages
+
+\usepackage{float}
+\usepackage{caption}
+	\captionsetup{
+		format=plain,
+		labelfont=bf,
+		font=small,
+		justification=centering
+	}
+	
+%%% Numbers and sets
+
+\newcommand{\E}{\mathrm{e}}
+
+\newcommand{\tx}[1]{\text{#1}}
+\newcommand{\rem}[1]{\operatorname{rem}{(#1)}}
+
+
+%
+\begin{document}
+	\pagenumbering{arabic}
+	% Start of class settings ...
+	\renewcommand*{\coursecode}{MATH 235} % renew course code
+	\renewcommand*{\assgnnumber}{Assignment 1} % renew assignment number
+	\renewcommand*{\submdate}{September 14, 2021} % renew the date
+	\renewcommand*{\studentfname}{Abdullah} % Student first name
+	\renewcommand*{\studentlname}{Zubair} % Student last name
+    \renewcommand*{\proofname}{Proof:}
+	% \renewcommand*{\studentnum}{20836288} % Student number
+
+	\renewcommand\qedsymbol{$\blacksquare$}
+	\setfigpath
+	% End of class settings	
+	% \pagestyle{crowdmark}
+	\newgeometry{left=18mm, right=18mm, top=22mm, bottom=22mm} % page is set to default values
+	\fancyhfoffset[L,O]{0pt} % header orientation fixed
+	% End of class settings
+	%%% Note to user:
+	% CTRL + F <CHANGE ME:> (without the angular brackets) in CKpreamble to specify graphics paths accordingly.
+	% The command \circled[]{} accepts one optional and one mandatory argument.
+	% Optional argument is for the size of the circle and mandatory argument is for its contents.
+	% \circled{A} produces circled A, with size drawn for letter A. \circled[TT]{A} produces circled A with size drawn for TT.
+	% https://github.com/CalvinKent/My-LaTeX
+	%%%
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%                        CUSTOM MACRO VIM-TEX                             %%%
+	%%       call IMAP('NOM', '\nomenclature{}', 'tex')               
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	% Crowdmark assignment start
+	% qnumber, qname, qpoints
+\maketitle
+	\section{Preamble}
+  This assignment covers everything taught so far. The solutions that you hand in should be \textbf{neat} and \textbf{legible},
+  this is an assignment, not a quiz, so I expect you to take your time and present thorough and detailed solutions.
+
+  This assignment has $\textbf{(REPLACE)}$ questions. \textbf{Start early}.
+  \section{Replacement} 
+
+  If your mark on this assignment is better than the last assignment, then I will replace the old assignment with
+  this one. This means that your final assignment mark will consist of two assignment marks, either A1, A3 or A1,
+  A2.
+
+  \section{Bonus}
+  If you type this assignment in \LaTeX, I will give you a bonus 7\%.
+  
+\section{Name and Date:}
+	Print your name and todays date below;\\
+
+
+	\begin{center}
+	\noindent\begin{tabular}{ll}
+		\makebox[3in]{\hrulefill} & \makebox[3in]{\hrulefill}\\
+		Name & Date\\[8ex]% adds space between the two sets of signatures
+	\end{tabular}
+	\end{center}
+	\newpage
+
+  \begin{qstn}
+    State in your own words, what does it mean for a number to be prime. What types of numbers can be primes? Why
+    do we care about primes?
+  \end{qstn}
+
+  \begin{qstn}
+    Let $x \in \Z$ and let $p$ be a prime.
+    \begin{enumerate}[label=(\alph*)]
+      \item Determine all possible values of $\gcd (x,p)$.
+      \item Determine all possible values of $\gcd (x^2,p)$.
+      \item Determine all possible values of $\gcd (x,p^2)$.
+      \item Determine all possible values of $\gcd (x^2,p^2)$.
+      \item Determine all possible values of $\gcd (p^2,p)$.
+    \end{enumerate}
+  \end{qstn}
+
+  \begin{qstn}
+    Let $p$ be a prime number. Determine the value of $ \operatorname{rem}(p,2)$ \textbf{and} explain how you got
+    your answer.
+  \end{qstn}
+  
+  \begin{qstn}
+    This question is meant for review as it will definitely appear on the Final. Let $f(x) = \sqrt{x} $, 
+    and let $R(x) = -2f(\frac{1}{2}x + 1) + 2$ be a transformation of $f$. 
+    \begin{enumerate}[label=(\alph*)]
+      \item Describe the transformation. \textbf{(Remember to Factor First)}
+
+      \item Determine the expression for the coordinate transformation,
+        \[
+            \left( \frac{x- H}{B}, Af(x) + K \right)
+        \] 
+
+      \item Complete a coordinate table to determine the corresponding transformed coordinates using the following
+        base coordinates,
+        \[
+            (0,0) \hspace*{2cm} (1,1) \hspace*{2cm} (4,2) \hspace*{2cm} (9,3) \hspace*{2cm} (16,4)
+        .\] 
+
+     \item Using your results from the coordinate table, sketch the transformation $R(x)$ \textbf{on your axis
+       sheet}. Be sure to \textbf{label} the transformed coordinates as well as the function.
+    \end{enumerate}
+
+  \end{qstn}
+
+
+  \begin{qstn}
+    Preform a prime factorization of the following natural numbers.\\
+    \textbf{Note:} If the number is a prime itself, then state that it is.
+    \begin{enumerate}[label=(\alph*)]
+      \item 3634.
+      \item 555.
+      \item 663.
+      \item 991.
+    \end{enumerate}
+  \end{qstn}
+
+
+  \begin{qstn}
+    \textbf{Fully }simplify the following exponential expressions.\\ \textbf{(Leave answers with positive exponents)}
+    \begin{enumerate}[label=(\alph*)]
+      \item $-x^2(-x)^2x^{-3}$
+                      \newpage
+      \item $\left( x^{-4} \right) / \left( y^{2} \right)^{-3}  $.
+      \item $\left( 4^{-1}y^2z^{-3}x^{8}x^{-3} \right)^{-3}y^{-6}z^{9}$.
+      \item $\left( 81a^{3}b^{2}z^{-6} \right)^{-2}  / \left( 3a^{9}bz^{-4} \right)^{-3}$.
+      \item $\left( 16 \right)^{\frac{3}{2}}\left( 9 \right)^{\frac{3}{2}} \left( 4\right) ^{\frac{-5}{2}} $.
+    \end{enumerate}
+  \end{qstn}
+    
+  \begin{qstn}
+    \textbf{Textbook, Pg. 39\,\,\, Q1. a),c),e)}
+  \end{qstn}
+
+  \begin{qstn}
+    \textbf{Textbook, Pg. 39\,\,\, Q3. a),c),e)}
+  \end{qstn}
+
+  \begin{qstn}
+    \textbf{Textbook, Pg. 39\,\,\, Q4. a),c),e)}
+  \end{qstn}
+
+  \begin{qstn}
+    \textbf{Textbook, Pg. 39\,\,\, Q5. a),c),e)}
+  \end{qstn}
+    
+  \begin{qstn}
+    \textbf{Textbook, Pg. 39\,\,\, Q7. a),c),e)}
+  \end{qstn}
+
+  \begin{qstn}
+    \textbf{Textbook, Pg. 94\,\,\, Q4. a),c)}
+  \end{qstn}
+
+  \begin{qstn}
+    \textbf{Textbook, Pg. 94\,\,\, Q6. c),d)}
+  \end{qstn}
+
+  \begin{qstn}
+    \textbf{Textbook, Pg. 94\,\,\, Q6. b),c)}
+  \end{qstn}
+
+  \begin{qstn}
+    You are given $\triangle SPQ$ where $SP = 13$,  $\angle PQS = 45^{\circ}$ and $\cos \beta = \sqrt{3} / 2$. Determine the
+        \textbf{exact }area of  $\triangle SPQ$.
+        \begin{center}
+          \begin{tikzpicture}[thick]
+          \coordinate (S) at (0,0);
+          \coordinate (P) at (6,4);
+          \coordinate (Q) at (15,0);
+          \coordinate (R) at (6,0);
+
+          \draw[black] (S) -- (Q) node[circle,fill,inner sep=2pt]{} node[above]{$Q$};
+          \draw[black] (S) -- (P) node[circle,black,fill,inner sep=2pt]{} node[above]{$P$} node[midway, above]{$13$};
+          \draw[black] (P) -- (Q) node[circle,black,fill,inner sep=2pt]{};
+          \draw[dashed] (P) -- (R) node[circle,black,fill,inner sep=2pt]{};
+          \draw[black] (S) node[circle,black,fill,inner sep=2pt]{} node[above]{$S$};
+          \draw[black] (R) node[circle,black,fill,inner sep=2pt]{} node[below]{$R$};
+
+          \tkzMarkAngle[fill= orange,size=1cm,%
+          opacity=1](S,P,R)
+          \tkzLabelAngle[pos = 1.4](S,P,R){$\beta$}
+
+          \tkzMarkAngle[fill= orange,size=1.4cm,%
+          opacity=1](P,Q,S)
+          \tkzLabelAngle[pos = 1.8](P,Q,S){$45^{\circ}$}
+
+          \tkzMarkRightAngle[size=0.4,opacity=0.9](S,R,P)% square angle here
+
+          \end{tikzpicture}
+      \end{center}
+  \end{qstn}
+
+  \begin{qstn}
+    Describe in your own words what polar coordinates are? Why are they useful and what advantages do they provide
+    as a metric?
+  \end{qstn}
+
+  \begin{qstn}
+    Convert (a), (b) to polar coordinates and (c), (d) to standard coordinates.
+    \begin{multicols}{4}
+      \begin{enumerate}[label=(\alph*)]
+        \item $\vb P(-3,4)$.
+          \columnbreak
+        \item $\vb R(-1,-3)$.
+          \columnbreak
+        \item $\vb Q(4,320 ^{\circ})$.
+          \columnbreak
+        \item $\vb T(9,30^{\circ})$.
+      \end{enumerate}
+      
+    \end{multicols}
+
+  \end{qstn}
+
+  \begin{qstn}
+    Determine the six trigonometric ratios for the following angles,
+    \begin{multicols}{4}
+      \begin{enumerate}[label=(\alph*)]
+        \item $\theta_1 = 60^{\circ}$
+          \columnbreak
+        \item $\theta_2 = 220^{\circ}$
+          \columnbreak
+        \item $\theta_3 = -240^{\circ}$
+          \columnbreak
+        \item $\theta_4 = 330^{\circ}$
+      \end{enumerate}
+      
+    \end{multicols}
+
+  \end{qstn}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

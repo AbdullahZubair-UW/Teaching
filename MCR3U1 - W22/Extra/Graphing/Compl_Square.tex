@@ -1,0 +1,114 @@
+
+% Prepared by Calvin Kent
+%
+% Assignment Template v19.02
+%
+%%% 20xx0x/MATHxxx/Crowdmark/Ax
+%
+\documentclass[12pt]{article} %
+\usepackage{amsthm}
+\usepackage{CKpreamble}
+\usepackage{CKassignment}
+\usepackage{mdframed}
+\usepackage{import}
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{xcolor}
+
+\newcommand{\incfig}[2][1]{%
+    \def\svgwidth{#1\columnwidth}
+    \import{./figures/}{#2.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
+
+%
+\begin{document}
+	\pagenumbering{arabic}
+	% Start of class settings ...
+	\renewcommand*{\coursecode}{MATH 235} % renew course code
+	\renewcommand*{\assgnnumber}{Assignment 1} % renew assignment number
+	\renewcommand*{\submdate}{September 14, 2021} % renew the date
+	\renewcommand*{\studentfname}{Abdullah} % Student first name
+	\renewcommand*{\studentlname}{Zubair} % Student last name
+    \renewcommand*{\proofname}{Proof:}
+	% \renewcommand*{\studentnum}{20836288} % Student number
+
+	\renewcommand\qedsymbol{$\blacksquare$}
+	\setfigpath
+	% End of class settings	
+	% \pagestyle{crowdmark}
+	\newgeometry{left=18mm, right=18mm, top=22mm, bottom=22mm} % page is set to default values
+	\fancyhfoffset[L,O]{0pt} % header orientation fixed
+	% End of class settings
+	%%% Note to user:
+	% CTRL + F <CHANGE ME:> (without the angular brackets) in CKpreamble to specify graphics paths accordingly.
+	% The command \circled[]{} accepts one optional and one mandatory argument.
+	% Optional argument is for the size of the circle and mandatory argument is for its contents.
+	% \circled{A} produces circled A, with size drawn for letter A. \circled[TT]{A} produces circled A with size drawn for TT.
+	% https://github.com/CalvinKent/My-LaTeX
+	%%%
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%                        CUSTOM MACRO VIM-TEX                             %%%
+	%%       call IMAP('NOM', '\nomenclature{}', 'tex')               
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	% Crowdmark assignment start
+	% qnumber, qname, qpoints
+
+\begin{center}
+		\Huge{\underline{\textbf{How to Complete the Square}}}
+\end{center}
+	Lets say we are given some quadratic polynomial $y = ax^2 + bx + c$ and we would like to convert this into vertex form, $y =
+	a(x - h)^2 + k$, the technique to do so is called completing the square. Remember what we dicussed yesterday, if a polynomial is
+	a perfect square, then its discrimnant ($d = b^2 - 4ac$) will be zero. (This idea will be used in the technique)
+	\begin{enumerate}
+		\item Find the $t$ value such that \[
+								0 = b^2 - 4at
+		.\] 
+	\item Insert $t$ into the equation as follows,
+						\[
+						y = ax^2 + bx + t - t + c
+						.\] 
+	\item Seperate the equation into two parts,
+		\[
+		y = (ax^2 + bx + t) + [c - t]
+		.\] 
+	\item Factor out $a$ from the round bracktes. \textbf{(IF $a = 1$ then nothing should change)}.
+		     \[
+		     y = a\left(x^2 + \frac{b}{a}x + \frac{t}{a}\right) + [c - t]
+		     .\] 
+	\item \textbf{IF $a\cdot b > 0$, then replace the equation with the following},
+		 \[
+					y = a\left( x + \sqrt{\frac{t}{a}} \right)^2 + [c - t] 
+		.\] 
+	\item \textbf{ELSE IF $a\cdot b < 0$, then replace the equation with the following},
+		 \[
+					y = a\left( x - \sqrt{\frac{t}{a}} \right)^2 + [c - t] 
+		.\]  
+	\item Were done! (The new polynomial is now in vertex form if you look carefully)
+	\end{enumerate}
+
+
+\textbf{\underline{\Large{Practice Problems:}}}
+
+Some of these problems are from the textbook, you can check your answers from there.
+\begin{qstn}
+	\textbf{Textbook:} Question 1 a),c),e),f)
+\end{qstn}
+
+\begin{qstn}
+	\textbf{Textbook:} Question 2 b),d),f)
+\end{qstn}
+
+
+
+
+\end{document}
+
+
+
+

@@ -1,0 +1,180 @@
+% Prepared by Calvin Kent
+\documentclass[12pt,oneside]{book} %
+\usepackage{CKpreamble}
+\usepackage{CKlecture}
+\usepackage{mdframed}
+\usepackage{import}
+\usepackage{pdfpages}
+\usepackage{euscript}
+\usepackage{transparent}
+\usepackage{xcolor}
+
+\newcommand{\incfig}[2][1]{%
+    \def\svgwidth{#1\columnwidth}
+    \import{./figures/}{#2.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
+%
+\renewcommand*{\doctitle}{Class Based Lecture Notes}
+\makeatletter\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}\makeatother % only used in class based
+\begin{document}
+	% Start of Class settings
+	\renewcommand*{\term}{Term 2} % Term
+	\renewcommand*{\coursecode}{MCR3U} % Course code
+	\renewcommand*{\coursename}{Course Name} % Full course name
+	\renewcommand*{\thelecnum}{4} % Lecture number
+	\renewcommand*{\profname}{Prof Name} % Prof Name
+	\renewcommand*{\colink}{http://www.student.math.uwaterloo.ca/~c2kent} % Course outline link
+	% End of Class settings
+	\clearpage
+	\pagenumbering{arabic}
+	\pagestyle{classlecture}
+	%%% Note to user: CTRL + F <CHANGE ME:> (without the angular brackets) in CKpreamble to specify graphics paths accordingly.
+	%%% If a new chapter was started in the middle of a lecture, \fix chap{Second Chapter} must be used immediately above the next lecture.
+	% Course notes start
+\setchap{4}{Inverse Functions Part 2}
+\begin{lec}{December 2021}
+	\chapter{\chapname\chaplec}
+Recall that in definition 3.4, we stated that \textbf{if} $f$ is invertible, then an inverse function for $f$ exists. The question
+remains, \textbf{what is this inverse function?}
+
+\begin{defn}
+    Let $\mathcal{A}$ and $\mathcal{B}$ be sets. Let $f \colon \mathcal{A} \to \mathcal{B}$ be some function. Let $g \colon \mathcal{B} \to \mathcal{A}$
+    be the function such that,
+    \begin{enumerate}
+      \item For all $a \in \mathcal{A}$, $g(f(a))= \id_\mathcal{A}(a) = a$.
+      \item For all $b \in \mathcal{B}$, $f(g(b)) = \id_\mathcal{B}(b) = b$.
+    \end{enumerate}
+    Then we say that $g$ is the \textbf{inverse function} of $f$.
+\end{defn}
+
+
+\begin{ex}
+  Let $ \mathcal{A} = \{1,2,3,5\} $ and $ \mathcal{B} = \{2,4,6,10\} $ be sets, lets define the
+  following function, 
+  \begin{itemize}
+    \item $f \colon \mathcal{A} \to \mathcal{B}$.
+    \item $f(a) = 2a$.
+  \end{itemize}
+  I claim that the function,
+  \begin{itemize}
+    \item $g \colon \mathcal{B} \to \mathcal{A}$.
+    \item $g(b) = \frac{1}{2}b$.
+  \end{itemize}
+  is the inverse function for $f$. \textbf{(Explanation in class)}
+\end{ex}
+
+\begin{notn}
+  If a function $f$ has an inverse, then we normally label this function as $f^{-1}$. This is meant to clear up confusion
+  between functions, but ironically it causes more confusion amongst student. Basically whatever letter the function is 
+  labelled by, just put a  '-1' on top to indicate the inverse function if it exists.
+\end{notn}
+
+\begin{ex}
+  Let $ \mathcal{A} = \{1,3,5,9\} $ and $ \mathcal{B} = \{1,2,3,5\} $ be sets, lets define the
+  following function, 
+  \begin{itemize}
+    \item $\phi \colon \mathcal{A} \to \mathcal{B}$.
+    \item $\phi(a) = \frac{1}{2}(a + 1)$.
+  \end{itemize}
+  I claim that the function,
+  \begin{itemize}
+    \item $\phi^{-1} \colon \mathcal{B} \to \mathcal{A}$.
+    \item $\phi^{-1}(b) = 2b - 1$.
+  \end{itemize}
+  is the inverse function. \textbf{(Explanation in class)}
+\end{ex}
+
+Lets take a look at a more interesting function and its inverse, but before doing so, I will briefly introduce you to a 
+new object.
+
+\newpage
+
+\section{Binary Strings}
+
+\begin{defn}
+    A \textbf{binary string} is sequence of $1's$ and  $0's$, formally referred to as bits. The string with no bits is denoted as $\epsilon$
+    (similar to the empty set).
+\end{defn}
+
+\begin{ex}
+  The following are binary strings,
+  \begin{itemize}
+    \item $\mathbf{S} = 101011$. 
+    \item $\mathbf{T} = 001010$.
+    \item $\mathbf{K} = 1$.
+  \end{itemize}
+\end{ex}
+
+\begin{defn}
+    Let $\mathbf{S}$ and $\mathbf{T}$ be binary strings. We define $\mathbf{S} + \mathbf{T}$ by gluing $\mathbf{S}$ and 
+    $\mathbf{T}$ together.
+\end{defn}
+
+\begin{ex}
+  Let $\mathbf{S} = 101$ and  $\mathbf{T} = 0001$, then  $\mathbf{S} + \mathbf{T} = 1010001$.
+\end{ex}
+
+
+\begin{ex}
+  Let $\mathbf{S} = 111$ and  $\mathbf{T} = \epsilon$, then  $\mathbf{S} + \mathbf{T} = 111$.
+\end{ex}
+
+\begin{notn}
+  Lets say we have a binary string $\mathbf{S}$, then $\vb s_i$ refers to the $i^{th}$ bit of $\mathbf{S}$. 
+\end{notn}
+
+\begin{ex}
+  Let $\mathbf{S} = 10100$ , then $\vb s_1 = 1$, $\vb s_3 = 1$, $\vb s_5 = 0$, etc.
+\end{ex}
+
+\begin{ex}
+  Let $\mathbf{T} = 00100$ , then $\vb t_1 = 0$, $\vb t_3 = 1$, $\vb t_4 = 0$ etc.
+\end{ex}
+ 
+This notation allows us to build \emph{substrings} of other strings, lets see how in the following example,
+
+\begin{ex}
+  Let $\mathbf{S} = 10100$ , then $\mathbf{R} = \vb s_1\vb s_3\vb s_4 = \hspace*{2cm}$ \textbf{(In class)}.
+\end{ex}
+
+\begin{ex}
+  Let $\mathbf{T} = 000111$ , then $\mathbf{B} = \vb t_2\vb t_3\vb t_6 = \hspace*{2cm}$ \textbf{(In class)}.
+\end{ex}
+
+\begin{ex}
+  Let $\EuScript{S} = \{111,010,110\}$ and $\EuScript{R} = \{0101,1101,1111\} $ . Define the following function,
+  \begin{itemize}
+    \item $f \colon \EuScript{S} \to \EuScript{R}$. 
+    \item $f(\mathbf{S}) = \mathbf{S} + 1$.
+  \end{itemize}
+  We can draw a mapping diagram to understand how the function behaves.
+  \begin{qstn}
+    What is the inverse function $f^{-1}$? \textbf{(In class)}
+  \end{qstn}
+\end{ex}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	\end{lec}
+
+\end{document}
+

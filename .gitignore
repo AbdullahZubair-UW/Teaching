@@ -1,0 +1,13 @@
+*.vo
+*.vos
+*.auctex-auto
+*.DS_Store
+*.idx
+*.ilg
+*.ind
+*.aux
+*.fdb_latexmk
+*.log
+*.synctex.gz
+*.fls
+*.out

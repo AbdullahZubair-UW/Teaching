@@ -1,0 +1,154 @@
+
+
+% Prepared by Calvin Kent
+%
+% Assignment Template v19.02
+%
+%%% 20xx0x/MATHxxx/Crowdmark/Ax
+%
+\documentclass[12pt]{article} %
+\usepackage{amsthm}
+\usepackage{CKpreamble}
+\usepackage{CKassignment}
+\usepackage{mdframed}
+\usepackage{tikz}
+\usepackage{pgfplots}
+
+%
+\begin{document}
+	\pagenumbering{arabic}
+	% Start of class settings ...
+	\renewcommand*{\coursecode}{MATH 235} % renew course code
+	\renewcommand*{\assgnnumber}{Assignment 1} % renew assignment number
+	\renewcommand*{\submdate}{September 14, 2021} % renew the date
+	\renewcommand*{\studentfname}{Abdullah} % Student first name
+	\renewcommand*{\studentlname}{Zubair} % Student last name
+    \renewcommand*{\proofname}{Proof:}
+	% \renewcommand*{\studentnum}{20836288} % Student number
+
+	\renewcommand\qedsymbol{$\blacksquare$}
+	\setfigpath
+	% End of class settings	
+	% \pagestyle{crowdmark}
+	\newgeometry{left=18mm, right=18mm, top=22mm, bottom=22mm} % page is set to default values
+	\fancyhfoffset[L,O]{0pt} % header orientation fixed
+	% End of class settings
+	%%% Note to user:
+	% CTRL + F <CHANGE ME:> (without the angular brackets) in CKpreamble to specify graphics paths accordingly.
+	% The command \circled[]{} accepts one optional and one mandatory argument.
+	% Optional argument is for the size of the circle and mandatory argument is for its contents.
+	% \circled{A} produces circled A, with size drawn for letter A. \circled[TT]{A} produces circled A with size drawn for TT.
+	% https://github.com/CalvinKent/My-LaTeX
+	%%%
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%                        CUSTOM MACRO VIM-TEX                             %%%
+	%%       call IMAP('NOM', '\nomenclature{}', 'tex')               
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	% Crowdmark assignment start
+	% qnumber, qname, qpoints
+
+\begin{center}
+  \textbf{\underline{\Huge{Solutions - Domain $\&$ Range}}}
+\end{center}
+\begin{qstn} Solution:  
+    \begin{enumerate}[label=(\alph*)]
+      \item $\mathcal{D} = \R$, $\mathcal{R} = \R$
+      \item $\mathcal{D} = \R$, $\mathcal{R} = \R$
+      \item $\mathcal{D} = \R$, $\mathcal{R} = 2$ * * *   *  (I feel like some may have gotten this wrong)
+      \item $\mathcal{D} = \R$, $\mathcal{R} = \R$
+      \item $\mathcal{D} = \R$, $\mathcal{R} = \R$
+      \item $\mathcal{D} = \R$, $\mathcal{R} = \R$
+    \end{enumerate}
+\end{qstn}
+
+\begin{qstn}
+  Solution:
+  \begin{enumerate}[label=(\alph*)]
+      \item $\mathcal{D} = \R$, $\mathcal{R} = \R$
+      \item $\mathcal{D} = \R$, $\mathcal{R} = \{y \in \R \mid y \geq -\frac{25}{4}\} $
+      \item $\mathcal{D} = \R$, $\mathcal{R} = \{y \in \R \mid y \leq -\frac{4}{3}\} $
+      \item $\mathcal{D} = \R$, $\mathcal{R} = \{y \in \R \mid y \geq -9\} $
+      \item $\mathcal{D} = \R$, $\mathcal{R} = \{y \in \R \mid y \leq 9\} $
+      \item $\mathcal{D} = \R$, $\mathcal{R} = \{y \in \R \mid y \leq \frac{181}{100}\} $
+  \end{enumerate}
+\end{qstn}
+
+\begin{qstn}
+  Solution:
+  \begin{enumerate}[label=(\alph*)]
+      \item $\mathcal{D} = \R$, $\mathcal{R} = \{y \in \R \mid y \geq 0\} $
+      \item $\mathcal{D} = \R$, $\mathcal{R} = \{y \in \R \mid y \leq -1\} $
+      \item $\mathcal{D} = \R$, $\mathcal{R} = \{y \in \R \mid y \geq 2\} $
+      \item $\mathcal{D} = \R$, $\mathcal{R} = \{y \in \R \mid y \geq \frac{5}{2}\} $
+      \item $\mathcal{D} = \R$, $\mathcal{R} = \{y \in \R \mid y \leq 0\}  $
+  \end{enumerate}
+\end{qstn}
+
+\begin{qstn}
+  Solution:
+  \begin{enumerate}[label=(\alph*)]
+      \item $\mathcal{D} = \{x\in \R \mid x \neq 0\} $, $\mathcal{R} = \{y \in \R \mid y \neq 0\} $
+      \item $\mathcal{D} = \{x\in \R \mid x \neq \frac{1}{2}\} $, $\mathcal{R} = \{y \in \R \mid y \neq 3\} $
+      \item $\mathcal{D} = \{x\in \R \mid x \neq 1\} $, $\mathcal{R} = \{y \in \R \mid y \neq -\frac{4}{3}\} $
+      \item $\mathcal{D} = \{x\in \R \mid x \neq \frac{15}{4}\} $, $\mathcal{R} = \{y \in \R \mid y \neq -16\} $
+      \item $\mathcal{D} = \{x\in \R \mid x \neq 0\} $, $\mathcal{R} = \{y \in \R \mid y \neq 0\} $
+  \end{enumerate}
+\end{qstn}
+
+\newpage
+
+\begin{qstn}
+  Solution:
+  \begin{enumerate}[label=(\alph*)]
+      \item $\mathcal{D} = \{x\in \R \mid x \geq 0\} $, $\mathcal{R} = \{y \in \R \mid y \geq 0\} $
+      \item $\mathcal{D} = \{x\in \R \mid x \leq \frac{7}{5}\} $, $\mathcal{R} = \{y \in \R \mid y \leq 1\} $
+      \item $\mathcal{D} = \{x\in \R \mid x \leq 0\} $, $\mathcal{R} = \{y \in \R \mid y \leq 0\} $
+      \item $\mathcal{D} = \{x\in \R \mid x \geq -1\} $, $\mathcal{R} = \{y \in \R \mid y \geq -1\} $
+  \end{enumerate}
+\end{qstn}
+
+\begin{qstn}
+  Solution:
+  \begin{enumerate}[label=(\alph*)]
+      \item $\mathcal{D} = \{x\in \R \mid -9 \leq x \leq -5\} $, $\mathcal{R} = \{y \in \R \mid 0 \leq y \leq 4\} $
+      \item $\mathcal{D} = \{x\in \R \mid -3 \leq x \leq 3\} $, $\mathcal{R} = \{y \in \R \mid -4 \leq y \leq 2\} $
+      \item $\mathcal{D} = \{x\in \R \mid -10 \leq x \leq -8\} $, $\mathcal{R} = \{y \in \R \mid 3 \leq y \leq 5\} $
+      \item $\mathcal{D} = \{x\in \R \mid -1 \leq x \leq 1\} $, $\mathcal{R} = \{y \in \R \mid -1 \leq y \leq 1\} $
+      \item $\mathcal{D} = \{x\in \R \mid 4 \leq x \leq 6\} $, $\mathcal{R} = \{y \in \R \mid -4 \leq y \leq -2\} $\\
+        (I think I accidentally typed an $(x+3)^2$ instead of $(y + 3)^2$).
+  \end{enumerate}
+\end{qstn}
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

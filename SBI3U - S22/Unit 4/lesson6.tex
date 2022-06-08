@@ -1,0 +1,206 @@
+% Prepared by Calvin Kent
+\documentclass[12pt,oneside]{book} %
+\usepackage{CKpreamble}
+\usepackage{CKlecture}
+\usepackage{mdframed}
+\usepackage{import}
+\usepackage{pdfpages}
+\usepackage{euscript}
+\usepackage{transparent}
+\usepackage{xcolor}
+
+\newcommand{\incfig}[2][1]{%
+    \def\svgwidth{#1\columnwidth}
+    \import{./figures/}{#2.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
+%
+\renewcommand*{\doctitle}{Class Based Lecture Notes}
+\makeatletter\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}\makeatother % only used in class based
+\begin{document}
+	% Start of Class settings
+	\renewcommand*{\term}{Term 2} % Term
+	\renewcommand*{\coursecode}{MCR3U} % Course code
+	\renewcommand*{\coursename}{Course Name} % Full course name
+	\renewcommand*{\thelecnum}{4} % Lecture number
+	\renewcommand*{\profname}{Prof Name} % Prof Name
+	\renewcommand*{\colink}{http://www.student.math.uwaterloo.ca/~c2kent} % Course outline link
+	% End of Class settings
+	\clearpage
+	\pagenumbering{arabic}
+	\pagestyle{classlecture}
+	%%% Note to user: CTRL + F <CHANGE ME:> (without the angular brackets) in CKpreamble to specify graphics paths accordingly.
+	%%% If a new chapter was started in the middle of a lecture, \fix chap{Second Chapter} must be used immediately above the next lecture.
+	% Course notes start
+\setchap{6}{Amniotes (\textit{Additional notes})}
+\begin{lec}{March 20222}
+	\chapter{\chapname\chaplec}
+
+  \textbf{Embryo:} (\textbf{Ask Class})\\
+  
+  \textbf{Amnion:} (\textbf{Ask Class})\\
+
+  \textbf{Amniotes} Are made up of reptiles, birds and mammals. These are species whose embryos develop within an amnion.
+
+
+  \section*{Structure of Amniote Egg}
+  \begin{itemize}
+    \item \textbf{Amnion} is the outer layer surrounding and protecting the embryo.
+    \item Within the egg exists a liquid known as \textbf{amniotic fluid} to provide a stable fluid environment.
+    \item The \textbf{allantois} serves two roles;
+      \begin{enumerate}
+        \item Assists in gas exchange.
+        \item Waste Removal.
+      \end{enumerate}
+    \item Food intake chamber is known as the \textbf{yolk sac}.
+    \item The \textbf{chorion} provides the overall enclosed structure.
+  \end{itemize}
+
+  \section*{Body Temperature}
+  \subsection*{Ectothermic}
+  \begin{itemize}
+    \item Require an external source of heat to maintain body temperatures.
+    \item Most reptiles are ectothermic.
+  \end{itemize}
+
+  \subsection*{Endothermic}
+  \begin{itemize}
+    \item Can self-regulate body temperatures by changing \textit{basal metabolic rate}.
+    \item Most mammals and birds are endothermic.
+  \end{itemize}
+  
+  \newpage
+ 
+  \section*{Reptiles}
+  
+  \subsubsection*{Herbivorous}
+  \begin{itemize}
+    \item Species that only eat plants.
+    \item Structure of certain organs adapt to such dietary behaviours.
+    \item \textbf{Not} limited to mammals!
+    \item \underline{Examples:} Cow, Goat, Deer, Horse.
+  \end{itemize}
+
+  \subsubsection*{Carnivorous}
+  \begin{itemize}
+    \item Species that only eat meat.
+    \item Structure of certain organs adapt to such dietary behaviours.
+    \item \textbf{Not} limited to mammals!
+    \item \underline{Examples:} Bears, Great white Sharks, Hyenas, Seals.
+  \end{itemize}
+  
+  \subsubsection*{Omnivorous}
+  \begin{itemize}
+    \item Species that eat both meat and plants.
+    \item Organs enable them to digest/consume both types of food.
+    \item \textbf{Not} limited to mammals!
+    \item \underline{Examples:} Lobsters, Dogs, Humans, Bears.
+  \end{itemize}
+  
+  \subsubsection*{Body Structure}
+  \begin{itemize}
+    \item Reptiles have scales made of \textbf{keratin} to help retain and regulate their bodies' moisture and heat.
+    \item Undergo molting whereby they adapt to shade in order to do so.
+    \item \textbf{Keratin:} Structural proteins that serve important structural and protective roles, as well as cell development in
+    some cases.
+  \end{itemize}
+
+
+  \section*{Birds}
+  \begin{itemize}
+    \item The wings are shaped precisely weighted to one side to help generate lift and also help with CG balancing.
+    \item The main bone known as the \textbf{humerus} is hollow instead of solid to reduce their
+    overall weight while preserving their skeleton structure.
+    \item Digestive system allows them to eat on the fly and digest later. 
+    \item Contrasting to other mammals, birds lay eggs. This makes as nesting eggs is far easier than carrying their
+    offspring in their bodies.
+  \end{itemize}
+
+  \section*{Mammals}
+  \begin{itemize}
+    \item Bodies wrapped in fur, produce milk to feed their offspring.
+    \item Have a four-chambered heart, limbs/fins.
+    \item \textbf{Diaphragm:}
+    \begin{itemize}
+      \item Contracts during inhalation to create a vacuum effect to enable air intake.
+      \item Expands during exhalation to release air.
+    \end{itemize}
+    \item \textbf{Mammary Glands:}
+    \begin{itemize}
+      \item Ducts that female mammals use to feed milk to their offspring.
+    \end{itemize}
+  \end{itemize}
+
+  \subsection*{Modern Mammals}
+  
+   \subsubsection*{Monotremes}
+   \begin{itemize}
+     \item Lay eggs instead giving birth.
+     \item \underline{Examples:} Platypus, Echidnas.
+   \end{itemize}
+   
+   \subsubsection*{Marsupials}
+   \begin{itemize}
+     \item Give birth to underdeveloped embryos that continue to mature and develop inside the pouch of their mother.
+     \item \underline{Examples:} Koala, giraffe, wombat.
+   \end{itemize}
+
+   \subsubsection*{Eutherians}
+   \begin{itemize}
+     \item AKA \textbf{Placentals}.
+     \item Develop their offspring within the \textbf{placenta}.
+     \item \textbf{Placenta:} An organ that connects the mother to her embryo.
+     \item \textbf{Umbilical Cord:} A cord which carries food, water and oxygen to the embryo and returns waste back to the
+     mother. (Belly button was the connecting point).
+   \end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	\end{lec}
+
+\end{document}
+

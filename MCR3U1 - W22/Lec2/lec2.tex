@@ -1,0 +1,265 @@
+\documentclass[12pt,oneside]{book} %
+\usepackage{CKpreamble}
+\usepackage{CKlecture}
+\usepackage{mdframed}
+\usepackage{import}
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{xcolor}
+
+\newcommand{\incfig}[2][1]{%
+    \def\svgwidth{#1\columnwidth}
+    \import{./figures/}{#2.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
+%
+\renewcommand*{\doctitle}{Class Based Lecture Notes}
+\makeatletter\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}\makeatother % only used in class based
+\begin{document}
+	% Start of Class settings
+	\renewcommand*{\term}{Term 2} % Term
+	\renewcommand*{\coursecode}{MCR3U} % Course code
+	\renewcommand*{\coursename}{Course Name} % Full course name
+	\renewcommand*{\thelecnum}{2} % Lecture number
+	\renewcommand*{\profname}{Prof Name} % Prof Name
+	\renewcommand*{\colink}{http://www.student.math.uwaterloo.ca/~c2kent} % Course outline link
+	% End of Class settings
+	\clearpage
+	\pagenumbering{arabic}
+	\pagestyle{classlecture}
+	%%% Note to user: CTRL + F <CHANGE ME:> (without the angular brackets) in CKpreamble to specify graphics paths accordingly.
+	%%% If a new chapter was started in the middle of a lecture, \fixchap{Second Chapter} must be used immediately above the next lecture.
+	% Course notes start
+\setchap{2}{Introduction to Functions}
+\begin{lec}{November 2021}
+	\chapter{\chapname\chaplec}
+	\begin{mdframed}
+		\begin{defn}
+			Let $\mathcal{A}$ and $\mathcal{B}$  be sets. A  \textbf{function}, $f$, is rule that acts on each element in $\mathcal{A}$,
+			and assigns it to some \textbf{unique} element in the set $\mathcal{B}$. We say that,
+      \begin{itemize}
+        \item $\mathcal{A}$ is the \textbf{domain} of $f$.
+        \item $\mathcal{B}$ is the \textbf{co-domain} of $f$.
+      \end{itemize}
+		\end{defn}
+    (I will define the word 'domain' in more detail later on)
+	\end{mdframed}
+	Its best to visualize this using the concept of diagrams I introduced to you about sets form last  lecture \textbf{(IN class)}.
+
+	\begin{notn}
+		Since a function $f$ assigns elements from the set $\mathcal{A}$ to elements in the set $\mathcal{B}$, we write this
+		symbolically as,
+		\[
+					f \colon \mathcal{A} \to \mathcal{B}
+		.\] 
+		You can read this as, ``$f$ goes from the set $\mathcal{A}$ to $\mathcal{B}$ ''.
+	\end{notn}
+
+	\begin{notn}
+			When $f$ will act on some element $a\in \mathcal{A}$, then symbolically we write
+			\[
+							f(a)
+			.\] You can also read this as ``$f$ at $a$ '' or  ``$f$ evaluated at $a$ '', etc. \textbf{This is NOT multiplication, just
+			notation.}
+	\end{notn}
+
+	\begin{ex}
+		Lets take a look at our first function. Let $\mathcal{A} = \{2,3,4\}, \mathcal{B} = \{3,4,5\} $ be sets, lets define a
+		function $f$,
+		\begin{itemize}
+			\item $f \colon \mathcal{A} \to \mathcal{B}$. (Must define this)
+			\item \textbf{rule of $f$:} Take each element in $\mathcal{A}$, and add $1$.
+		\end{itemize}
+	\end{ex}
+
+	\begin{rem}
+			\textbf{Note!} We do not require a function that goes from $\mathcal{A}$ to $\mathcal{B}$ to map to \emph{every} element in
+			$B$.
+	\end{rem}
+
+	\begin{ex}
+		Lets take another function. Let $\mathcal{H} = \{2,3,4\}, \mathcal{T} = \{3,4,5\} $ be sets, lets define a
+		function $g$,
+		\begin{itemize}
+			\item $g \colon \mathcal{H} \to \mathcal{T}$.
+			\item \textbf{rule of $f$:} Take each element in $\mathcal{H}$, and subtract $1$.
+		\end{itemize}
+	\end{ex}
+
+	\begin{rem}
+			\textbf{Notice} that the definition of a function requries that each element in $\mathcal{A}$ is mapped to a
+			\emph{unique} element in $\mathcal{B}$. \textbf{(Explanation in class)}
+	\end{rem}
+
+	\newpage
+
+	\begin{notn}
+			How to write the rule of a function symbolically.\\
+			When rules of functions begin to get more complex, we need to switch over to writing rules of functions symbolically.
+			So when we say something like ``Take each element of $\mathcal{H}$ and subtract one'', how can we write this symbolically?
+			We can say ``Take each element $h\in \mathcal{H}$ and preform,
+						\[
+						f(h) = h - 1
+						.\] 
+			This translates to, take each element in $\mathcal{H}$ and subtract that element by one. Now we have a much better may of defining the
+			rules of functions.
+	\end{notn}
+
+	\begin{ex}
+		Translate the following symbolical rules to plain English.
+		\begin{enumerate}[label=(\alph*)]
+			\item \textbf{rule of $Q$:} For every element $a\in \mathcal{A}$, evaluate $Q(a) = a + 1$.
+			\item \textbf{rule of $M$:} For every element $x\in \mathcal{X}$, evaluate $M(x) = \frac{x}{2}$.
+			\item \textbf{rule of $Z$:} For every element $b\in \mathcal{B}$, evaluate  $Z(b) = 2b$.
+			\item \textbf{rule of $R$:} For every element $c\in \mathcal{C}$, evaluate $R(c) = \sqrt{c} $.
+			\item \textbf{rule of $S$:} For every element $y\in \mathcal{Y}$, evaluate $S(y) = y^2 - 2$.
+		\end{enumerate}
+	\end{ex}
+	
+	\begin{ex}
+		Let $\mathcal{A} = \R$, and $\mathcal{B} = \R$, lets define a function $f$,
+		\begin{itemize}
+			\item $f \colon \mathcal{A} \to \mathcal{B}$.
+			\item \textbf{rule of $f$:} For every element $a\in \mathcal{A}$, evaluate $f(a) = a^2 - 5a + 6$.
+		\end{itemize}
+		With this definition, determine the following outputs
+		\begin{enumerate}[label=(\alph*)]
+			\item $f(-1)$
+			\item $f(\frac{2}{3})$
+			\item $f(f(3))$
+		\end{enumerate}
+	\end{ex}
+
+	\begin{ex}
+		\textbf{(Class Example)} Let $\mathcal{X} = \R$, and $\mathcal{Y} = \R$, lets define \emph{two} functions $f$,$g$,
+		\begin{itemize}
+		\item $f \colon \mathcal{X} \to \mathcal{Y}$, $g \colon \mathcal{X} \to \mathcal{Y}$.
+		\item \textbf{rule of $f$:} For every element $x\in \mathcal{X}$, evaluate $f(x) = x^2 - 4 $.
+		\item \textbf{rule of $g$:} For every element $x\in \mathcal{X}$, evaluate $g(x) = x - 1$.
+		\end{itemize}
+		With this definition, determine the following outputs
+		\begin{enumerate}[label=(\alph*)]
+			\item $f(-2)$
+			\item $g(0)$
+			\item $f(g(3))$
+		\end{enumerate}
+	\end{ex}
+
+	\section{Graphing/Sketching Functions}
+	Lets take both functions from our previous example, $g(x) = x - 1$ and $f(x) = x^2 -  4$. Notice that the right hand side of
+	$g$ is a simple linear function. Lets graph it \textbf{(In class)}.
+
+	Notice that the right hand side of $f$ is a quadratic function, lets sketch it as well \textbf{(In class)}.
+
+  \begin{rem}
+      There is something called the \textbf{vertical line test} that helps you determine wether or not a graph is a function or
+      not. You use it by drawing a straight line through your graph (until it touches it everywhere possilbe). If your vertical
+      line intersects the graph at two or more \emph{distinct} points, then the graph is \emph{not} a function. Else, it is a
+      function.
+  \end{rem}
+
+  \begin{ex}
+    Use the vertical line test to show that $x^2 + y^2 = 4$ is \emph{not} a function.
+  \end{ex}
+
+  \begin{ex}
+    Use the vertical line test to show that $f(x) = x^2 - 4$ is a function.
+  \end{ex}
+
+  \section{Domain and Range of Functions}
+  \begin{mdframed}
+    \begin{defn}
+      The \textbf{domain} of a function is the \emph{set} of all values that the function is allowed to take as input. (We usually label
+      this set with the capital letter $\mathcal{D}$).
+    \end{defn}
+  \end{mdframed}
+  \begin{ex}
+    Let $f(x) = \sqrt{x}$ be a function. Determine the domain of $f$. \textbf{(In class)}.
+  \end{ex}
+  \begin{ex}
+    Let $T(x) = x^2 - 4$ be a function. Determine the domain of $T$. \textbf{(In class)}.
+  \end{ex}
+
+  \begin{mdframed}
+    \begin{defn}
+      The \textbf{range} of a function is the \emph{set} that contains ALL of the output values of the function. (We usually label
+      this set with the capital letter $\mathcal{R}$).
+    \end{defn}
+  \end{mdframed}
+  \begin{ex}
+    Let $g(x) = x^2$ be a function. Determine the range of $g$. \textbf{(In class)}
+  \end{ex}
+  \begin{ex}
+    Let $r(x) = 2x + 1$ be a function. Determine the range of $r$. \textbf{(In class)}
+  \end{ex}
+
+  \begin{ex}
+    We will define a function as a class, then we will determine the range of our function.
+    \begin{itemize}
+      \item Define the domain $\mathcal{D} = \cdots$ 
+      \item \textbf{rule of $g$:} For every element $x\in \mathcal{D}$, \ldots 
+      \item The range of our function is $\mathcal{R} = \cdots$
+    \end{itemize}
+  \end{ex}
+
+ \section{Maximum's and Minimums}
+ Lets say we have some function,
+    \[
+          f(x) = a(x - h) ^2 + k
+    \] 
+ that outputs some quadratic equation in vertex form. Then,
+  \begin{itemize}
+		\item \textbf{IF $a < 0$ ($a$ is negative)} then we say that the vertex represents a \emph{maximum}.
+			\begin{itemize}
+				\item This makes sense because if $a < 0$, the parabola points down, and the highest point of the parabola must have been
+					the vertex.
+			\end{itemize}
+		\item \textbf{ELSE IF $a > 0$ ($a$ is positive)} then we say that the vertex represents a \emph{minimum}.
+			\begin{itemize}
+				\item This makes sense because if $a > 0$, the parabola points up, and the lowest point of the parabola must have been
+					the vertex.
+			\end{itemize}
+\end{itemize}
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+	\end{lec}
+
+\end{document}
+%\fixchap{Second Chapter}
+%	\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=0.75\linewidth]{p}
+%	\caption{caption.\label{fig:}}
+%	\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

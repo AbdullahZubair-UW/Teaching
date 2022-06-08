@@ -1,0 +1,10 @@
+\babel@toc {english}{}
+\babel@toc {english}{}
+~\hfill \textbf {Page}\par 
+\contentsline {chapter}{\huge \textup {Table of Contents}}{i}{section*.1}%
+\contentsline {chapter}{\small Preface and Notation}{ii}{section*.2}%
+\contentsline {subparagraph}{L1:\color {blue!25}\hdashrule [0ex]{\textwidth }{0.1pt}{}}{1}{section*.3}%
+\contentsline {chapter}{\numberline {1}First Chapter: Lectures \mbox {1--x}}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Source code for .sty and .tex files are available on Github}{1}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Links}{1}{subsection.1.1.1}%
+\contentsline {subparagraph}{L2:{ \circled {\tiny {!}} \textsc {Midterm} }\color {Purple!25}\hdashrule [0ex]{\textwidth }{0.1pt}{}}{2}{section*.4}%

@@ -1,0 +1,189 @@
+% Prepared by Calvin Kent
+\documentclass[12pt,oneside]{book} %
+\usepackage{CKpreamble}
+\usepackage{CKlecture}
+\usepackage{mdframed}
+\usepackage{import}
+\usepackage{pdfpages}
+\usepackage{euscript}
+\usepackage{transparent}
+\usepackage{xcolor}
+
+\newcommand{\incfig}[2][1]{%
+    \def\svgwidth{#1\columnwidth}
+    \import{./figures/}{#2.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
+%
+\renewcommand*{\doctitle}{Class Based Lecture Notes}
+\makeatletter\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}\makeatother % only used in class based
+\begin{document}
+	% Start of Class settings
+	\renewcommand*{\term}{Term 2} % Term
+	\renewcommand*{\coursecode}{MCR3U} % Course code
+	\renewcommand*{\coursename}{Course Name} % Full course name
+	\renewcommand*{\thelecnum}{4} % Lecture number
+	\renewcommand*{\profname}{Prof Name} % Prof Name
+	\renewcommand*{\colink}{http://www.student.math.uwaterloo.ca/~c2kent} % Course outline link
+	% End of Class settings
+	\clearpage
+	\pagenumbering{arabic}
+	\pagestyle{classlecture}
+	%%% Note to user: CTRL + F <CHANGE ME:> (without the angular brackets) in CKpreamble to specify graphics paths accordingly.
+	%%% If a new chapter was started in the middle of a lecture, \fix chap{Second Chapter} must be used immediately above the next lecture.
+	% Course notes start
+\setchap{3}{Algae (\textit{Additional notes})}
+\begin{lec}{March 20222}
+	\chapter{\chapname\chaplec}
+
+  \subsection*{Characteristics of Algae}
+
+  \begin{itemize}
+    \item Only live in aquatic areas.
+    \item Classified based on water they grow; its salt content, temp, quality, flagella content.
+    \item Can be both autotrophic or heterotrophic.
+  \end{itemize}
+
+  \subsection*{Classifications of Algae}
+  \begin{itemize}
+    \item \textbf{Chlorophyta:} Are green algae.
+    \item \textbf{Phaeophyta:} Are brown algae.
+    \item \textbf{Rhodophyta:} Are red algae.
+  \end{itemize}
+
+  \section*{Chlorophyta}
+  \begin{itemize}
+    \item Found mostly in marine habitats; seawater, swamps, lakes and ponds.
+    \item Single celled, prefer to form colonies.
+    \item \textbf{Chlorophyll:} 
+       \begin{itemize}
+         \item The pigments within cells where photosynthesis occurs.
+         \item Reflect high-energy green light which gives them their green color.
+       \end{itemize}
+  \end{itemize}
+
+
+  \section*{Phaeophyta}
+
+  \begin{itemize}
+    \item Multicellular.
+    \item \textbf{Blades:} Help algae collect as much light from the surface.
+    \item \textbf{Holdfasts:} Rootlike appendages which attach themselves to rocks.
+    \item \textbf{Fucoxanthin:} Works together with chlorophyll to enable photosynthesis. Reflect brown light which gives the
+       plant its brown color.
+  \end{itemize}
+
+  \newpage
+
+  \section*{Rhodophyta}
+  \begin{itemize}
+    \item \textbf{Phycoerythrin:} Pigments that reflect red light which give the plant its red color.
+    \item \textbf{Filaments:} Long chains of single-celled algae.
+    \item \textbf{Coralline algae:} Type of rhodophyta, important for coral reefs due to their ability to produce CaCO$_3$ which
+       is a component of reefs. 
+  \end{itemize}
+
+  \section*{Diatoms}
+  \begin{itemize}
+    \item \textbf{Silica cell walls:} Cell walls are silica based, chemical properties including solubility
+       electropositivity and brittility. 
+    \item Has more than 2 Million species.
+    \item Release oxygen into the environment. (1/3 of Earth oxygen from diatoms) making them a vital component to any
+       ecosystem whose organism need a source of oxygen.
+    \item \textbf{Environment:} Artic/Marine ; tropical reefs, sea water, forests.
+  \end{itemize}
+
+  \section*{Dino flagellates}
+  \begin{itemize}
+    \item Single-celled, \textbf{both} autotrophic \& heterotrophic.
+    \item \textbf{Heterotrophic dinoflagellates:} Hunt and eat other protists or protozoa.
+    \item \textbf{Autotrophic dinoflagellates:} Use their chlorophyll for photosynthesis.
+    \item Have two flagella to assist in motion.
+    \item Some are \textbf{Bioluminescent}; living organisms that are able to produce light.
+    \item If they receive large quantities of nutrients they may \textbf{bloom}, which may produce toxins that can kill
+       thousands of fish and also infect those who eat them.
+    \item \textbf{Bloom:} A rapid reproduction of microorganisms.
+  \end{itemize}
+
+
+
+
+
+  
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  
+
+
+
+  
+
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	\end{lec}
+
+\end{document}
+

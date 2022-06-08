@@ -1,0 +1,192 @@
+
+% Prepared by Calvin Kent
+%
+% Assignment Template v19.02
+%
+%%% 20xx0x/MATHxxx/Crowdmark/Ax
+%
+\documentclass[12pt]{article} %
+\usepackage{amsthm}
+\usepackage{CKpreamble}
+\usepackage{CKassignment}
+\usepackage{mdframed}
+\usepackage{import}
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{xcolor}
+
+\newcommand{\incfig}[2][1]{%
+    \def\svgwidth{#1\columnwidth}
+    \import{./figures/}{#2.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
+
+%
+\begin{document}
+	\pagenumbering{arabic}
+	% Start of class settings ...
+	\renewcommand*{\coursecode}{MATH 235} % renew course code
+	\renewcommand*{\assgnnumber}{Assignment 1} % renew assignment number
+	\renewcommand*{\submdate}{September 14, 2021} % renew the date
+	\renewcommand*{\studentfname}{Abdullah} % Student first name
+	\renewcommand*{\studentlname}{Zubair} % Student last name
+    \renewcommand*{\proofname}{Proof:}
+	% \renewcommand*{\studentnum}{20836288} % Student number
+
+	\renewcommand\qedsymbol{$\blacksquare$}
+	\setfigpath
+	% End of class settings	
+	% \pagestyle{crowdmark}
+	\newgeometry{left=18mm, right=18mm, top=22mm, bottom=22mm} % page is set to default values
+	\fancyhfoffset[L,O]{0pt} % header orientation fixed
+	% End of class settings
+	%%% Note to user:
+	% CTRL + F <CHANGE ME:> (without the angular brackets) in CKpreamble to specify graphics paths accordingly.
+	% The command \circled[]{} accepts one optional and one mandatory argument.
+	% Optional argument is for the size of the circle and mandatory argument is for its contents.
+	% \circled{A} produces circled A, with size drawn for letter A. \circled[TT]{A} produces circled A with size drawn for TT.
+	% https://github.com/CalvinKent/My-LaTeX
+	%%%
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%                        CUSTOM MACRO VIM-TEX                             %%%
+	%%       call IMAP('NOM', '\nomenclature{}', 'tex')               
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	% Crowdmark assignment start
+	% qnumber, qname, qpoints
+
+\begin{center}
+	\textbf{\underline{\Huge{Test 1 - Review}}}
+\end{center}
+\begin{qstn}
+  Let the set \textbf{English} be the entire English dictionary, and the set \textbf{Arabic} be the entire Arabic dictionary. Lets
+  define the following function,
+  \begin{align*}
+    f \colon \textbf{English} &\rightarrow \textbf{Arabic}\\
+    f(\text{English Word}) &= \text{Arabic Word}
+  .\end{align*}
+
+  \begin{enumerate}[label=(\alph*)]
+    \item Determine $f(\text{door})$.
+    \item Determine $f(\text{tall})$.
+    \item Determine $f(\text{books})$.
+    \item Determine $f(\text{short})$.
+  \end{enumerate}
+\end{qstn}
+
+\begin{qstn}
+  Determine the elements of the following sets, (Reacll that $\N = \{1,2,3,4,5,\dots\} $ ).
+  \begin{enumerate}[label=(\alph*)]
+    \item $H = \{n \in \N \mid n \geq 4\} $
+    \item $R = \{y \in \Z \mid -2 < y \leq 4\}  $
+    \item $A = \{r \in \Z \mid r^2 - 4 = 0\} $
+  \end{enumerate}
+\end{qstn}
+
+
+\begin{qstn}
+  Let $\mathcal{V} = \{3,4,5,6,8,10\}$, and $\mathcal{W} = \{0,1,2,3,4,5\} $. Define the following function,
+  \begin{align*}
+    R &\colon \mathcal{V} \rightarrow \mathcal{W}\\
+    R(v) &= \gcd \left(2v, \operatorname{rem}(v,3)\right)
+  .\end{align*}
+  Draw a mapping diagram of the function. (\textbf{Note:} $\gcd(x,0) = x$).
+\end{qstn}
+
+\begin{qstn}
+  Let $T(x) = 3x^2 + 4x$, and $H(x) = x - 1$.
+  \begin{enumerate}[label=(\alph*)]
+    \item Determine $T(T(1))$.
+    \item Determine $H(H(-2))$.
+    \item Determine $T(H(0))$.
+    \item Factor $T(x)$. \textbf{(This should take one step)}
+    \item Factor $T(H(x))$. ***** \textbf{Test Question}
+  \end{enumerate}
+
+\end{qstn}
+
+\begin{qstn}
+  Determine the Domain and Range of the following functions,
+  \begin{enumerate}[label=(\alph*)]
+    \item $\mathcal{T}(x) = -\sqrt{-4x + 8} - 7 $.
+    \item $F(x) = -x^2+2x+5$.
+    \item $L(x) = -2x + 1$.
+    \item $\mathcal{P}(x) = 2|-x + 1| - 5$.
+    \item $\mathcal{P}(x) = -\frac{3}{5x - 2} + 4$.
+    \item $(x + 1)^2 + y^2 = 4$.
+  \end{enumerate}
+\end{qstn}
+
+\begin{qstn}
+  Let $f(x) = 2x^2 + 5x - 3$.
+  \begin{enumerate}[label=(\alph*)]
+    \item How many solutions will $f(x)$ have?
+    \item Factor $f(x)$.
+    \item State the x-intercepts of $f(x)$.
+    \item Convert $f(x)$ from factored form to vertex form.
+    \item Using your function in vertex form, sketch it \textbf{(Label the y-intercept, x-intercepts and the vertex}).
+  \end{enumerate}
+\end{qstn}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

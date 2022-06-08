@@ -1,0 +1,241 @@
+% Prepared by Calvin Kent
+%
+% Assignment Template v19.02
+%
+%%% 20xx0x/MATHxxx/Crowdmark/Ax
+%
+\documentclass[12pt]{article} %
+\usepackage{CKpreamble}
+\usepackage{CKassignment}
+\usepackage{tkz-euclide}
+\usepackage{physunits}
+\usepackage{physics}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{upgreek}
+\usepackage{xcolor}
+\usepackage{euscript}
+\usepackage{tasks}
+\usepackage{tkz-euclide}
+
+
+\usepackage[misc]{ifsym}
+
+
+%%Title
+\title{Grammar Quiz 1}
+\date{March, 2022}
+
+%%% Maths and science packages
+
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{pgfplots}
+	\usetikzlibrary{
+		calc,
+		patterns,
+		positioning
+	}
+	\pgfplotsset{
+		compat=1.16,
+		samples=200,
+		clip=false,
+		my axis style/.style={
+			axis x line=middle,
+			axis y line=middle,
+			legend pos=outer north east,
+			axis line style={
+				->,
+			},
+			legend style={
+				font=\footnotesize
+			},
+			label style={
+				font=\footnotesize
+			},
+			tick label style={
+				font=\footnotesize
+			},
+			xlabel style={
+				at={
+					(ticklabel* cs:1)
+				},
+				anchor=west,
+				font=\footnotesize,
+			},
+			ylabel style={
+				at={
+					(ticklabel* cs:1)
+				},
+				anchor=west,
+				font=\footnotesize,
+			},
+			xlabel= $x$,
+			ylabel=$\vec d (\m \tx{[East]})$
+		},
+	}
+	\tikzset{
+		>=stealth
+	}
+
+%%% Tables and figures packages
+
+\usepackage{float}
+\usepackage{caption}
+	\captionsetup{
+		format=plain,
+		labelfont=bf,
+		font=small,
+		justification=centering
+	}
+	
+%%% Numbers and sets
+
+\newcommand{\E}{\mathrm{e}}
+
+\newcommand{\tx}[1]{\text{#1}}
+
+\begin{document}
+    \pagenumbering{arabic}
+    % Start of class settings ...
+    \renewcommand*{\coursecode}{MCR3U Quiz} % Quiz Title
+    \renewcommand*{\assgnnumber}{2} % Quiz number
+    \renewcommand*{\submdate}{January, 2022} % renew the date
+    \renewcommand*{\studentfname}{\textbf{Name:}} % Student first name
+    \renewcommand*{\studentlname}{} % Student last name
+    %\renewcommand*{\studentnum}{SNumber} % Student number
+
+    \renewcommand\qedsymbol{$\blacksquare$}
+    \setfigpath
+    % End of class settings 
+    \pagestyle{crowdmark}
+    \newgeometry{left=18mm, right=18mm, top=22mm, bottom=22mm} % page is set to default values
+    \fancyhfoffset[L,O]{0pt} % header orientation fixed
+    % End of class settings
+    %%% Note to user:
+    % CTRL + F <CHANGE ME:> (without the angular brackets) in CKpreamble to specify graphics paths accordingly.
+    % The command \circled[]{} accepts one optional and one mandatory argument.
+    % Optional argument is for the size of the circle and mandatory argument is for its contents.
+    % \circled{A} produces circled A, with size drawn for letter A. \circled[TT]{A} produces circled A with size drawn for TT.
+    % https://github.com/CalvinKent/My-LaTeX
+    %%%
+    % Crowdmark assignment start
+
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%%%%%%%%%%%%%%%%                  PROBLEM IDEAS                  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%%%%                   ----------------------------------------                                %%%%%%%%
+
+    % --> Do a hard tangent line problem
+
+	\maketitle
+	\section{Preamble}
+  This is a grammar quiz covering what we have learned in lecture so far (Up to lesson 4).
+	\section{Allowed Aids}
+  This is a closed book quiz, nothing is allowed.
+	\section{Name and Date:}
+	Print your name and todays date below;
+
+  \vspace*{0.4cm}
+
+	\begin{center}
+	\noindent\begin{tabular}{ll}
+		\makebox[3in]{\hrulefill} & \makebox[3in]{\hrulefill}\\
+		Name & Date\\[8ex]% adds space between the two sets of signatures
+	\end{tabular}
+	\end{center}
+	\newpage
+
+
+\begin{qstn}[1]
+  For each of the following quotes, insert a comma where you feel is appropriate. If you feel like the quote
+  is correct as is, then leave it. \textbf{Provide a brief explanation} for your corrections.
+
+  \begin{enumerate}
+    \item "While you were wrestling Maalik I was slapping Qaasim."
+      \vspace*{4cm}
+
+    \item "For our grammar lesson today we will be taking a look at how to
+      correctly implement the ! punctuation mark."
+      \vspace*{4cm}
+      
+    \item "Br.Abdullah you are an old man period."
+      \vspace*{4cm}
+
+    \item "I have a fruitful passion towards boxing my students and my siblings."
+      \vspace*{4cm}
+
+  \end{enumerate}
+
+  
+\end{qstn}
+
+
+\begin{qstn}[2]
+  For each of the following quotes, correct the adjective or adverb where you feel is appropriate. If you feel like the quote
+  is correct as is, then leave it. \textbf{Provide a brief explanation} for your corrections.
+  
+  \begin{enumerate}
+    \item "His parents were real mad that he used the washroom in his pants."
+      \vspace*{4cm}
+
+    \item "Sometimes thriller movies end bad".
+      \vspace*{4cm}
+      
+    \item "It felt well to hit Maalik."
+      \vspace*{4cm}
+
+    \item "My grandfather looks good for someone his age"
+      \vspace*{4cm}
+
+  \end{enumerate}
+  
+\end{qstn}
+
+\begin{qstn}[3]
+  For each of the following quotes, ensure that pronoun agreement is correct. If you feel like the quote
+  is correct as is, then leave it. \textbf{Provide a brief explanation} for your corrections.
+
+  \begin{enumerate}
+    \item "Neither of my classmates are liking this new teacher, his beard is far too ugly"
+      \vspace*{4cm}
+
+    \item "Anyone in the following age group is encouraged to share their opinion".
+      \vspace*{4cm}
+      
+    \item "Several of the students felt like their teacher had diarrhea."
+      \vspace*{4cm}
+
+
+  \end{enumerate}
+\end{qstn}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

@@ -1,0 +1,187 @@
+% Prepared by Calvin Kent
+%
+% Assignment Template v19.02
+%
+%%% 20xx0x/MATHxxx/Crowdmark/Ax
+%
+\documentclass[12pt]{article} %
+\usepackage{amsthm}
+\usepackage{CKpreamble}
+\usepackage{CKassignment}
+\usepackage{mdframed}
+\usepackage{euscript}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{pdfpages}
+\usepackage{euscript}
+\usepackage{transparent}
+\usepackage{xcolor}
+\usepackage{tasks}
+\usepackage{tkz-euclide}
+
+%
+\begin{document}
+	\pagenumbering{arabic}
+	% Start of class settings ...
+	\renewcommand*{\coursecode}{MATH 235} % renew course code
+	\renewcommand*{\assgnnumber}{Assignment 1} % renew assignment number
+	\renewcommand*{\submdate}{September 14, 2021} % renew the date
+	\renewcommand*{\studentfname}{Abdullah} % Student first name
+	\renewcommand*{\studentlname}{Zubair} % Student last name
+    \renewcommand*{\proofname}{Proof:}
+	% \renewcommand*{\studentnum}{20836288} % Student number
+
+	\renewcommand\qedsymbol{$\blacksquare$}
+	\setfigpath
+	% End of class settings	
+	% \pagestyle{crowdmark}
+	\newgeometry{left=18mm, right=18mm, top=22mm, bottom=22mm} % page is set to default values
+	\fancyhfoffset[L,O]{0pt} % header orientation fixed
+	% End of class settings
+	%%% Note to user:
+	% CTRL + F <CHANGE ME:> (without the angular brackets) in CKpreamble to specify graphics paths accordingly.
+	% The command \circled[]{} accepts one optional and one mandatory argument.
+	% Optional argument is for the size of the circle and mandatory argument is for its contents.
+	% \circled{A} produces circled A, with size drawn for letter A. \circled[TT]{A} produces circled A with size drawn for TT.
+	% https://github.com/CalvinKent/My-LaTeX
+	%%%
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%                        CUSTOM MACRO VIM-TEX                                                      (Word Wrap->
+	%%       call IMAP('NOM', '\nomenclature{}', 'tex')               
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	% Crowdmark assignment start
+	% qnumber, qname, points
+
+\begin{center}
+	\textbf{\underline{\Huge{Solutions - Lecture 9 - Homework}}}
+\end{center}
+
+\begin{qstn} \texttt{  }
+    \begin{enumerate}[label=(\alph*)]
+      \item
+        \[
+            \sin 30^{\circ} = \frac{1}{2} \hspace{0.7cm} \cos 30^{\circ} = \frac{\sqrt{3}}{2} \hspace{0.7cm} 
+            \tan 30^{\circ} = \frac{1}{\sqrt{3}}
+        \] 
+
+        \[
+            \csc 30^{\circ} = 2 \hspace{0.7cm} \sec 30^{\circ} = \frac{2}{\sqrt{3}} \hspace{0.7cm} 
+            \cot 30^{\circ} = \sqrt{3} 
+        \] 
+
+      \item
+        \[
+            \sin 225^{\circ} = -\frac{1}{\sqrt{2}} \hspace{0.7cm} \cos 225^{\circ} = -\frac{1}{\sqrt{2}} \hspace{0.7cm} 
+            \tan 225^{\circ} = 1
+        \] 
+
+        \[
+            \csc 225^{\circ} = -\sqrt{2}  \hspace{0.7cm} \sec 225^{\circ} = -\sqrt{2}  \hspace{0.7cm} 
+            \cot 225^{\circ} = 1
+        \] 
+
+      \item
+        \[
+            \sin -240^{\circ} = \frac{\sqrt{3}}{2} \hspace{0.7cm} \cos -240^{\circ} = -\frac{1}{2} \hspace{0.7cm} 
+            \tan -240^{\circ} = -\sqrt{3}. 
+        \] 
+
+        \[
+            \csc -240^{\circ} = \frac{2}{\sqrt{3}} \hspace{0.7cm} \sec -240^{\circ} = -2 \hspace{0.7cm} 
+            \cot -240^{\circ} = -\frac{1}{\sqrt{3}}. 
+        \] 
+
+      \item
+        \[
+            \sin 330^{\circ} = -\frac{1}{2} \hspace{0.7cm} \cos 330^{\circ} = \frac{\sqrt{3}}{2} \hspace{0.7cm} 
+            \tan 330^{\circ} = -\frac{1}{\sqrt{3}}
+        \] 
+
+        \[
+            \csc 330^{\circ} = -2 \hspace{0.7cm} \sec 330^{\circ} = \frac{2}{\sqrt{3}} \hspace{0.7cm} 
+            \cot 330^{\circ} = -\sqrt{3} 
+        \] 
+      
+    \end{enumerate}
+\end{qstn}
+
+\begin{qstn}\texttt{  }
+  \begin{enumerate}[label=(\alph*)]
+    \item $ \vb P\left( \frac{1}{\sqrt{2}}, \frac{1}{\sqrt{2}} \right)$
+    \item $ \vb Q\left( -1, \sqrt{3}  \right) $
+    \item $ \vb T\left( -2\sqrt{3} , -2 \right)$
+    \item $ \vb M\left( 0,-3  \right) $
+    \item $ \vb G\left( \frac{3\sqrt{3}}{2} ,-\frac{3}{2}  \right) $
+  \end{enumerate}
+\end{qstn}
+
+\newpage
+
+\begin{qstn} \texttt{  }
+    \begin{tasks}(4)
+       \task $\theta_1 = 330^{\circ}$
+       \task $\theta_2 = 330^{\circ}$
+       \task $\theta_3 = 300^{\circ}$
+       \task $\theta_4 = 345.96^{\circ}$
+    \end{tasks}
+\end{qstn}
+
+\begin{qstn} \texttt{  }
+    \begin{tasks}(4)
+       \task $\lambda_1 = 135^{\circ}$
+       \task $\lambda_2 = 120^{\circ}$
+       \task $\lambda_3 = 150^{\circ}$
+       \task $\lambda_4 = 123.69^{\circ}$
+    \end{tasks}
+\end{qstn}
+
+\begin{qstn}\texttt{  }
+  \begin{enumerate}[label=(\alph*)]
+    \item $ \vb P\left( 8, 330^{\circ}\right)$
+    \item $ \vb Q\left( \sqrt{2} , 135^{\circ} \right) $
+    \item $ \vb T\left( 3\sqrt{5} , 206.56^{\circ} \right)$
+    \item $ \vb M\left( 6, 300^{\circ} \right) $
+  \end{enumerate}
+\end{qstn}
+
+\newpage
+
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

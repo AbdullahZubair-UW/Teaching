@@ -1,0 +1,182 @@
+% Prepared by Calvin Kent
+\documentclass[12pt,oneside]{book} %
+\usepackage{CKpreamble}
+\usepackage{CKlecture}
+\usepackage{mdframed}
+\usepackage{import}
+\usepackage{pdfpages}
+\usepackage{euscript}
+\usepackage{transparent}
+\usepackage{xcolor}
+
+\newcommand{\incfig}[2][1]{%
+    \def\svgwidth{#1\columnwidth}
+    \import{./figures/}{#2.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
+%
+\renewcommand*{\doctitle}{Class Based Lecture Notes}
+\makeatletter\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}\makeatother % only used in class based
+\begin{document}
+	% Start of Class settings
+	\renewcommand*{\term}{Term 2} % Term
+	\renewcommand*{\coursecode}{MCR3U} % Course code
+	\renewcommand*{\coursename}{Course Name} % Full course name
+	\renewcommand*{\thelecnum}{4} % Lecture number
+	\renewcommand*{\profname}{Prof Name} % Prof Name
+	\renewcommand*{\colink}{http://www.student.math.uwaterloo.ca/~c2kent} % Course outline link
+	% End of Class settings
+	\clearpage
+	\pagenumbering{arabic}
+	\pagestyle{classlecture}
+	%%% Note to user: CTRL + F <CHANGE ME:> (without the angular brackets) in CKpreamble to specify graphics paths accordingly.
+	%%% If a new chapter was started in the middle of a lecture, \fix chap{Second Chapter} must be used immediately above the next lecture.
+	% Course notes start
+\setchap{2}{Protozoa (\textit{Additional notes})}
+\begin{lec}{March 20222}
+	\chapter{\chapname\chaplec}
+
+  \section*{Protozoa}
+  \begin{itemize}
+    \item Species within the Protist Kingdom.
+    \item Are heterotrophic (Eat other things).
+    \item Possess a membrane-bound nucleus.
+    \item Confined to aquatic habitats.
+  \end{itemize}
+
+  
+  Protozoa's are divided into four categories segregated based on movement.
+
+  \section*{Amoeboids}
+  \begin{itemize}
+    \item Protists that change body shape in order to move.
+    \item Expand and contract their \textbf{pseudopods} to grip and move, as a consequence body composition changes
+       temporarily. 
+    \item \textbf{Pseudopods:} Groups of cytoplasm temporarily used as ``feet'' for movement.
+    \item \textbf{Phagocytosis:} Process in which certain cells consume energy (food).
+       \begin{enumerate}
+         \item \textbf{Recognition:} Detection of microbes using receptors on the cell membrane.
+         \item \textbf{Engulfment:} Cell morphs around the microbe and traps it within the vacoule for digesting food.
+         \item \textbf{Intraceullar Killing:} Lysosmes within the cells release antibacterial molecules to kill and digest
+            the microbe, filtering any waste in the process.
+         \item \textbf{Exocytosis:} Process of waste elimination.
+       \end{enumerate}
+    \item Can eat from any part of their body.
+  \end{itemize}
+
+  \section*{Flagellates}
+
+  \begin{itemize}
+    \item \textbf{Flagella:} Long hairlike organ, used similar to how fish use their tail to swim.
+    \item Have either a thin \textbf{Pellicle} outer covering or a coating of a jellylike substance . 
+    \item Reproduce either \textbf{asexually} (longitudinal splitting) or sexually.
+    \item Can be either heterotrophic or autotrophic;
+    \item \textbf{Zooflagellates:} Heterotrophic , eat use phagocytosis like amoebas.
+    \item \textbf{Phytoflagellates:} Autotrophic (produces its own food), contain chlorophyll which allows them to obtain
+       nutrients through \textit{photosynthesis}.
+  \end{itemize}
+
+  \section*{Ciliates}
+
+  \begin{itemize}
+    \item \textbf{Cilia:} Short hairs found around the body of celibates that enable them to move.
+       (Movement similar to a boat)
+    \item Contain two types of nuclei;
+    \item \textbf{Macronucleus:} Larger nuclei, handles \textbf{all} non-reproductive cell functions.
+    \item \textbf{Micronucleus:} Handles reproduction, genes are passed to offspring during reproduction, macronucleus
+       degenerates and a new one is formed from the genes of the micronucleus.
+  \end{itemize}
+
+  \section*{Apicomplexa}
+
+  \begin{itemize}
+    \item A.K.A \textbf{Sporozoa}, because of their ability to form sporelike cells.
+    \item Are \textbf{immobile}.
+    \item They are \textbf{parasitic}, they rely on a host to latch onto not only for movement but for nutrients as well.
+    \item \textbf{Apical Complex:} Organelle used to enter host cells.
+    \begin{itemize}
+      \item \textbf{Apical Cap:} Tip of the sporozoa.
+      \item \textbf{Rhoptries:} Produce enzymes to ease entry into host cells.
+    \end{itemize}
+    \item Similar to viruses, trick host cells using apical complex.
+  \end{itemize}
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  
+
+
+
+  
+
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	\end{lec}
+
+\end{document}
+

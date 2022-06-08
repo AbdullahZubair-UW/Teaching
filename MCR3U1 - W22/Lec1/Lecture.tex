@@ -1,0 +1,196 @@
+% Prepared by Calvin Kent
+%
+% Lecture Template v19.02
+%
+%%% 201901/MATHxxx/Notes
+%
+\documentclass[12pt,oneside]{book} %
+\usepackage{CKpreamble}
+\usepackage{CKlecture}
+\usepackage{mdframed}
+\usepackage{import}
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{xcolor}
+
+\newcommand{\incfig}[2][1]{%
+    \def\svgwidth{#1\columnwidth}
+    \import{./figures/}{#2.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
+%
+\renewcommand*{\doctitle}{Class Based Lecture Notes}
+\makeatletter\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}\makeatother % only used in class based
+\begin{document}
+	% Start of Class settings
+	\renewcommand*{\term}{Term 2} % Term
+	\renewcommand*{\coursecode}{MCR3U} % Course code
+	\renewcommand*{\coursename}{Course Name} % Full course name
+	\renewcommand*{\profname}{Prof Name} % Prof Name
+	\renewcommand*{\colink}{http://www.student.math.uwaterloo.ca/~c2kent} % Course outline link
+	% End of Class settings
+	\clearpage
+	\pagenumbering{arabic}
+	\pagestyle{classlecture}
+	%%% Note to user: CTRL + F <CHANGE ME:> (without the angular brackets) in CKpreamble to specify graphics paths accordingly.
+	%%% If a new chapter was started in the middle of a lecture, \fixchap{Second Chapter} must be used immediately above the next lecture.
+	% Course notes start
+\setchap{1}{Introduction to Sets}
+\begin{lec}{November 2021}
+	\chapter{\chapname\chaplec}
+	\begin{mdframed}
+		\begin{defn}
+		\emph{Sets} are defined to be a collection of objects in a pair of curly braces $\{\}$.
+		\end{defn}
+	\end{mdframed}
+	When we say objects, we are usually referring to numbers, however objects can be any other piece of information as well
+		(Letters, symbols, etc).
+
+		We usually assign a captial letter to represent a set.
+		\begin{ex} Here are some examples of sets.
+			\begin{itemize}
+			    \item $A = \{1,2,3,4\}$
+			    \item $B = \{\clubsuit, \heartsuit, \triangle\}$
+			    \item $S =  \{A,B,C,D,E\}$
+			    \item $\emptyset$
+	    \end{itemize}
+    \end{ex}
+		(Class examples)
+
+		\begin{notn} Lets say we have a set $S = \{2,3,4\}$.
+			\begin{itemize}
+				\item  Then we say that $2,3,4$ are \emph{elements} of the set $S$, and we may write this
+			symbolically as $2 \in S$, where '$\in$' means 'element of'.
+		\item Is $5$ an element of $S$? It isn't, and hence we say that $5$ is \emph{not} an element of $S$, and we may write this
+			symbolically as $5\not\in S$, where '$\not\in$' means 'not an element of'.
+		\end{itemize}
+			
+		(Class examples)
+			\end{notn}
+
+		\begin{rem}
+			When we are dealing with sets, there are two things to keep in mind.
+				\begin{itemize}
+					\item Order does not matter! (Class Example)
+					\item Duplicate elements are \emph{always} deleted. (Class Example)
+					\end{itemize}
+			\end{rem}
+
+			\begin{mdframed}
+				\begin{defn}
+			The \emph{empty set} is the set that contains nothing. We label it $\emptyset$.
+				\end{defn}
+			\end{mdframed}
+
+			\vspace*{0.2cm}
+
+			\begin{mdframed}
+				\begin{defn} Important Sets.\\
+					There a few important sets that we will see throughout the course.
+					\begin{enumerate}
+					\item $\mathbb Z$ denotes the set of all integers $\mathbb Z = \{\dots,-2,-1,0,1,2,\dots \}$.
+					\item $\mathbb Q$ denotes the set of all rational numbers.\\ (A rational number is any number that can be written as a fraction
+						of two integers).
+					\item $\mathbb R$ denotes the set of all real numbers (rational or irrational).
+					\end{enumerate}
+								
+					\end{defn}
+			\end{mdframed}
+			
+			\newpage
+	\begin{notn}
+			Dots.
+
+			We often use dots in sets to indicate that the obvious pattern continues on forever. For example, what to do you think that
+			the set $S = \{1,2,3,4,5,\dots\}$ will look like?
+			\end{notn}
+
+		\begin{notn} Describing sets.
+
+			The most common way we will describe a set is to give a rule which must be obeyed by \emph{all} elements of the set. For
+			example, we may say that all elements must be even, or that all elements must be greater than four, or we may say that all
+			elements must be between one and thirteen, etc. This way we can come up with more unique sets.
+
+			For example, lets write down the set of all integers between one and four, label the set $S$.
+																$$S = \{1,2,3,4\}$$
+			For this set, the rule is that all integers are allowed such that they are between one and four. We write the previous
+			sentence symbolically as,
+										$$S = \{x\in \Z \mid 1 \leq x \leq 4\}$$
+			The bar '$\mid$' means 'such that'. Here '$x$' acts as a placeholder that represents all integers that satisfy the condition
+			that they are between one and four, or in other words, $1\leq x\leq 4$.
+			\end{notn}
+
+		\begin{ex}
+			Describe the following sets symbolically,
+			\begin{enumerate}
+				\item All the real numbers that are greater than or equal to $4$
+				\item All the real numbers that are not zero.
+				\item All the integers that are less than $-1$.
+				\item All the real numbers that are between $1$ and $6$.
+				\item \emph{(Bonus)}All of the positive integers (0,1,2,3,$\dots$).
+					\end{enumerate}
+			\end{ex}
+
+			\begin{ex}
+				Write down the elements of the following sets.
+				\begin{enumerate}
+					\item $A = \{y \in \Z \mid y \geq 1\}$.
+					\item $B = \{x \in \R \mid x = 1\}$.
+					\item $T = \{y \in \Z \mid -1 \leq y \leq  2\}$.
+					\item $S = \{z \in \Z \mid \text{$z$ is even}\}$.
+						\end{enumerate}
+				\end{ex}
+				\newpage
+				\section{Visualizing Sets}
+				Suppose that we have some set $S = \{2,4,6,7\}$. Sometimes we can think of sets using the following diagram,
+				\begin{figure}[ht]
+			    \centering
+					\incfig[0.3]{riemmans-theorem}
+					\label{fig:riemmans-theorem}
+				\end{figure}\\
+				This will be a useful representation of sets when we begin to study functions.
+	\end{lec}
+
+\end{document}
+%\fixchap{Second Chapter}
+%	\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=0.75\linewidth]{p}
+%	\caption{caption.\label{fig:}}
+%	\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

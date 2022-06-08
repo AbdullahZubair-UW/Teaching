@@ -1,0 +1,174 @@
+\documentclass[12pt,oneside]{book} %
+\usepackage{CKpreamble}
+\usepackage{CKlecture}
+\usepackage{mdframed}
+\usepackage{import}
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{xcolor}
+
+\newcommand{\incfig}[2][1]{%
+    \def\svgwidth{#1\columnwidth}
+    \import{./figures/}{#2.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
+%
+\renewcommand*{\doctitle}{Class Based Lecture Notes}
+\makeatletter\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}\makeatother % only used in class based
+\begin{document}
+	% Start of Class settings
+	\renewcommand*{\term}{Term 2} % Term
+	\renewcommand*{\coursecode}{MCR3U} % Course code
+	\renewcommand*{\coursename}{Course Name} % Full course name
+	\renewcommand*{\thelecnum}{3} % Lecture number
+	\renewcommand*{\profname}{Prof Name} % Prof Name
+	\renewcommand*{\colink}{http://www.student.math.uwaterloo.ca/~c2kent} % Course outline link
+	% End of Class settings
+	\clearpage
+	\pagenumbering{arabic}
+	\pagestyle{classlecture}
+	%%% Note to user: CTRL + F <CHANGE ME:> (without the angular brackets) in CKpreamble to specify graphics paths accordingly.
+	%%% If a new chapter was started in the middle of a lecture, \fixchap{Second Chapter} must be used immediately above the next lecture.
+	% Course notes start
+\setchap{3}{Inverse Functions Part 1}
+\begin{lec}{December 2021}
+	\chapter{\chapname\chaplec}
+In this lesson, we will explore the notion of an invertible function. This is of particular importance since invertible functions
+tell us more about the domain, the co-domain and correspondences between the two. In particular, we can reconstruct 
+the entire domain based strictly on knowledge of the co-domain.
+
+\begin{defn}
+    Let $\mathcal{A}$ and $\mathcal{B}$ be sets. The \textbf{identity function} on the set $\mathcal{A}$ is the function defined as,
+    \begin{align*}
+      \id_\mathcal{A} \colon \mathcal{A} &\rightarrow \mathcal{B}\\
+      \id_\mathcal{A}(a) &= a
+    \end{align*}
+    This is essentially the function that takes each element in $\mathcal{A}$ and returns it.
+\end{defn}
+The identity function is essentially the most trivial function, lets see how it works in the following example.
+
+\begin{ex}
+  Let $\mathcal{H} = \{4,6,7,10,12\}$ and $\mathcal{T} = \{1,4,5,7,8,10,12,6\}$ be sets. Draw the mapping diagram for
+  the identity function on $\mathcal{H}$, i.e $\id_\mathcal{H} \colon \mathcal{H} \to \mathcal{T}$. \textbf{(In class)}
+\end{ex}
+
+\begin{defn}
+    Let $\mathcal{A}$ and $\mathcal{B}$ be sets. Let $f \colon \mathcal{A} \to \mathcal{B}$ be some function. We say that $f$ is
+    \textbf{surjective} if every element in $\mathcal{B}$ is mapped to.
+\end{defn}
+
+\begin{ex}
+  Let $ \mathcal{A} = \{2,3,4,5,6\} $ and $ \mathcal{B} = \{0,1\} $ be sets, lets define the
+  following function, 
+  \begin{itemize}
+    \item $\mathcal{R} \colon \mathcal{A} \to \mathcal{B}$.
+    \item $\mathcal{R}(a) = \operatorname{rem}(a,2)$.
+  \end{itemize}
+  I claim that $\mathcal{R}$ is surjective. \textbf{(Explanation in Class)}
+\end{ex}
+
+\begin{ex}
+  Notice that the function defined in Example 3.1 is \textbf{not} surjective. \textbf{(Explanation in Class)}
+\end{ex}
+
+\begin{defn}
+    Let $\mathcal{A}$ and $\mathcal{B}$ be sets. Let $f \colon \mathcal{A} \to \mathcal{B}$ be some function. We say that $f$ is
+    \textbf{injective} if no two elements in $\mathcal{A}$ map to a single element in $\mathcal{B}$.
+\end{defn}
+
+\begin{ex}
+  Notice that the function defined in Example 3.2 is \textbf{not} injective. \textbf{(Explanation in Class)}
+\end{ex}
+
+\newpage
+
+\begin{ex}
+  Let $ \mathcal{A} = \{0,1,2\} $ and $ \mathcal{B} = \{1,2,3,25,36\} $ be sets, lets define the
+  following function, 
+  \begin{itemize}
+    \item $f \colon \mathcal{A} \to \mathcal{B}$.
+    \item $f(a) = a + 1$.
+  \end{itemize}
+  I claim that the function $f$ is injective . \textbf{(In class explanation)}
+\end{ex}
+
+We are now ready to define invertible functions
+
+\begin{defn}
+    Let $\mathcal{A}$ and $\mathcal{B}$ be sets. Let $f \colon \mathcal{A} \to \mathcal{B}$ be some function. If $f$ is both
+    injective and surjective, then we say $f$ is \textbf{invertible} and an inverse function for $f$ exists.
+\end{defn}
+
+
+\begin{ex}
+  Let $ \mathcal{A} = \{1,2,3,5,18\} $ and $ \mathcal{B} = \{2,4,6,10,36\} $ be sets, lets define the
+  following function, 
+  \begin{itemize}
+    \item $\mathcal{L} \colon \mathcal{A} \to \mathcal{B}$.
+    \item $\mathcal{L}(a) = 2a$.
+  \end{itemize}
+  I claim that $\mathcal{L}$ is invertible. \textbf{(Explanation in Class)}
+\end{ex}
+
+\begin{ex}
+  Let $ \mathcal{A} = \{-2,-1,0,1,2,3\} $ and $ \mathcal{B} = \{0,1,4,9,25,36\} $ be sets, lets define the
+  following function, 
+  \begin{itemize}
+    \item $f \colon \mathcal{A} \to \mathcal{B}$.
+    \item $f(a) = a^2$.
+  \end{itemize}
+  I claim that the function $f$ is \textbf{not} invertible. \textbf{(In class explanation)}
+\end{ex}
+
+\begin{question}
+  Let $\mathcal{A}$, $\mathcal{B}$ be sets, and let $f \colon  \mathcal{A} \to \mathcal{B}$ be a function. Suppose that $f$ is
+  \textbf{surjective}, then is it true that the range is equal to $\mathcal{B}$? In other words, is $\mathcal{R}_f = \mathcal{B}$?
+\end{question}
+
+\begin{answer}
+  Yes ! \textbf{(In class)}
+\end{answer}
+
+
+\begin{question}
+  Let $\mathcal{A}$, $\mathcal{B}$ be sets, and let $f \colon  \mathcal{A} \to \mathcal{B}$ be an \textbf{invertible} function.
+  Then is it true that $ \left|\mathcal{A}\right| = \left|\mathcal{B}\right|$? \textbf{(Class Question)}
+\end{question}
+
+\begin{answer}
+  Yes ! \textbf{(In class)}
+\end{answer}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	\end{lec}
+
+\end{document}
+%\fixchap{Second Chapter}
+%	\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=0.75\linewidth]{p}
+%	\caption{caption.\label{fig:}}
+%	\end{figure}

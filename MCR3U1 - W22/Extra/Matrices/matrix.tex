@@ -1,0 +1,260 @@
+% Prepared by Calvin Kent
+\documentclass[12pt,oneside]{book} %
+\usepackage{CKpreamble}
+\usepackage{CKlecture}
+\usepackage{mdframed}
+\usepackage{import}
+\usepackage{pdfpages}
+\usepackage{euscript}
+\usepackage{transparent}
+\usepackage{xcolor}
+
+\newcommand{\incfig}[2][1]{%
+    \def\svgwidth{#1\columnwidth}
+    \import{./figures/}{#2.pdf_tex}
+}
+
+
+\newcounter{step}[section]
+\newenvironment{step}[1][]
+{\refstepcounter{step} \textit{Step #1.}}
+
+\newcounter{Rule}[section]
+\newenvironment{Rule}[1][]
+{\refstepcounter{Rule} \textit{Rule #1.}}
+
+
+\pdfsuppresswarningpagegroup=1
+
+%
+\renewcommand*{\doctitle}{Class Based Lecture Notes}
+\makeatletter\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}\makeatother % only used in class based
+\begin{document}
+	% Start of Class settings
+	\renewcommand*{\term}{Term 2} % Term
+	\renewcommand*{\coursecode}{MCR3U} % Course code
+	\renewcommand*{\coursename}{Course Name} % Full course name
+	\renewcommand*{\thelecnum}{7} % Lecture number
+	\renewcommand*{\profname}{Prof Name} % Prof Name
+	\renewcommand*{\colink}{http://www.student.math.uwaterloo.ca/~c2kent} % Course outline link
+	% End of Class settings
+	\clearpage
+	\pagenumbering{arabic}
+	\pagestyle{classlecture}
+	%%% Note to user: CTRL + F <CHANGE ME:> (without the angular brackets) in CKpreamble to specify graphics paths accordingly.
+	%%% If a new chapter was started in the middle of a lecture, \fix chap{Second Chapter} must be used immediately above the next lecture.
+	% Course notes start
+\setchap{7}{Rational Expressions}
+\begin{lec}{January 2022}
+
+  \begin{defn}
+      Let $a,b,c \in \R$. A \textbf{polynomial} $P(x)$ is an expression that has form,
+        \[
+            P(x) = ax^2 + bx + c
+        .\] 
+  \end{defn}
+
+  \begin{rem}
+      Really polynomials are not limited to second degree, however they will be for this course.
+  \end{rem}
+
+  \begin{ex}
+    Examples of polynomials,
+    \begin{itemize}
+      \item $Q(x) = 2x^2 + 3x + 1$.
+      \item $P(x) = 3$.
+      \item $R(x) = 5x - 3$.
+    \end{itemize}
+  \end{ex}
+
+  \begin{defn}
+      A \textbf{rational expression} is a ratio of two polynomials, $P(x)$ and $Q(x)$, 
+       \[
+         \frac{P(x)}{Q(x)}
+      .\] 
+  \end{defn}
+
+  \section{Multiplication and Division.}
+  Suppose we are given a product of two rational expressions,
+  \[
+        \frac{A(x)}{B(x)} \times \frac{C(x)}{D(x)}
+  .\] 
+  Follow these steps to simply,
+
+  \begin{step}[1]
+    Rewrite as a single fraction,
+    \[
+        \frac{A(x)C(x)}{B(x)D(x)}
+    .\] 
+  \end{step}
+
+  \begin{step}[2]
+    Factor all of $A(x),B(x),C(x),D(x)$, then \textbf{rewrite} the expression.
+  \end{step}
+
+  \begin{step}[2]
+    Cancel all common factors, reduce any coefficients with common factors.
+  \end{step}
+
+  If instead we are faced with a division of two rational expressions, then simply use the reciprocal to change to
+  the equivalent product,
+  \[
+        \frac{A(x)}{B(x)} \div \frac{C(x)}{D(x)} = \frac{A(x)}{B(x)} \times \frac{D(x)}{C(x)}
+  .\] 
+
+  \newpage
+
+  \begin{ex}
+    Simply the following,
+    \begin{enumerate}[label=(\alph*)]
+      \item \[
+            \frac{x^2 + 7x + 12}{x^2 + 5x + 4}
+      .\] 
+
+    \item
+      \[
+        \frac{x^2 - 3x - 18}{2x^2 + 5x - 3}
+      .\] 
+
+      \item \[
+            \frac{4x^2}{3x} \times \frac{12x^3}{2x}
+      .\] 
+
+    \item \[
+          \frac{2x^2 - 8x}{x^2 - 3x - 10} \div \frac{4x^2}{x^2 - 9x + 20}
+    .\] 
+    \end{enumerate}
+
+
+  \end{ex}
+
+  \section{GCD's of polynomials}
+  We can extend the concept of the $\gcd$ to polynomials as  well. Generally speaking, given polynomials $P(x)$ and
+  $Q(x)$ in \textbf{factored form}, the value of $\gcd \left( P(x), Q(x) \right) $ can be obtained trivially by
+  analysing the greatest common product of factors.
+
+  \begin{ex}
+    Let $P(x) = x^2 - 5x + 6$ and  $Q(x) = 2x^2 - 14x + 24$. Determine $\gcd \left( P(x), Q(x) \right) $.
+  \end{ex}
+
+  \begin{ex}
+    Let $P(x) = 5x-10$ and  $R(x) = 10x$. Determine $\gcd \left( P(x), R(x) \right) $.
+  \end{ex}
+
+  \begin{ex}
+    Let $A(x) = x^2 - 4x + 3$ and  $B(x) = 2x^2 - 7x + 3$. Determine $\gcd \left( A(x), B(x) \right) $.
+  \end{ex}
+
+  \section{Addition and Subtraction}
+  Suppose we are given a sum or difference of two rational expressions,
+  \[
+        \frac{A(x)}{B(x)} \pm \frac{C(x)}{D(x)}
+  .\] 
+
+  Follow these steps to simplify,
+
+  \begin{step}[1]
+    Factor both $B(x)$ and $D(x)$.
+  \end{step}
+  
+  \begin{step}[2]
+    Determine the LCD, 
+    \[
+        \textcolor{blue}{L(x)} = \frac{B(x)\cdot D(x)}{\gcd \left( B(x),D(x) \right) }
+    .\] 
+  \end{step}
+  
+  \begin{step}[3]
+    Determine the \textit{adjustment factors},
+    \[
+          \textcolor{red}{R(x)} = \frac{L(x)}{B(x)} \hspace*{1cm} \textcolor{violet}{Q(x)} = \frac{L(x)}{D(x)}
+    .\] 
+  \end{step}
+
+  \begin{step}[4]
+    Rewrite the fraction with the LCD and simplify,
+    \[
+        \frac{A(x)\cdot \textcolor{red}{R(x)} \pm  C(x) \cdot \textcolor{violet}{Q(x)}}{\textcolor{blue}{L(x)}}
+    .\] 
+  \end{step}
+
+  \begin{ex}
+    Simply the following,
+    \begin{enumerate}[label=(\alph*)]
+      \item \[
+          \frac{1}{5x} + \frac{1}{2x}
+      .\] 
+      
+    \item \[
+        \frac{x}{(x+1)^2} + \frac{2}{x + 1}
+    .\] 
+
+    \item \[
+      \frac{x + 9}{x^2 + 2x - 48} - \frac{x - 9}{x^2 - x - 30}
+  .\] 
+   
+
+    \end{enumerate}
+  \end{ex}
+
+
+
+
+
+  
+
+	\end{lec}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

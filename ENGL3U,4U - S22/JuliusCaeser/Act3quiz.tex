@@ -1,0 +1,238 @@
+% Prepared by Calvin Kent
+%
+% Assignment Template v19.02
+%
+%%% 20xx0x/MATHxxx/Crowdmark/Ax
+%
+\documentclass[12pt]{article} %
+\usepackage{CKpreamble}
+\usepackage{CKassignment}
+\usepackage{tkz-euclide}
+\usepackage{physunits}
+\usepackage{physics}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{upgreek}
+\usepackage{xcolor}
+\usepackage{euscript}
+\usepackage{tasks}
+\usepackage{tkz-euclide}
+
+
+\usepackage[misc]{ifsym}
+
+
+%%Title
+\title{Julius Caeser - Act 3 Quiz}
+\date{April, 2022}
+
+%%% Maths and science packages
+
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{pgfplots}
+	\usetikzlibrary{
+		calc,
+		patterns,
+		positioning
+	}
+	\pgfplotsset{
+		compat=1.16,
+		samples=200,
+		clip=false,
+		my axis style/.style={
+			axis x line=middle,
+			axis y line=middle,
+			legend pos=outer north east,
+			axis line style={
+				->,
+			},
+			legend style={
+				font=\footnotesize
+			},
+			label style={
+				font=\footnotesize
+			},
+			tick label style={
+				font=\footnotesize
+			},
+			xlabel style={
+				at={
+					(ticklabel* cs:1)
+				},
+				anchor=west,
+				font=\footnotesize,
+			},
+			ylabel style={
+				at={
+					(ticklabel* cs:1)
+				},
+				anchor=west,
+				font=\footnotesize,
+			},
+			xlabel= $x$,
+			ylabel=$\vec d (\m \tx{[East]})$
+		},
+	}
+	\tikzset{
+		>=stealth
+	}
+
+%%% Tables and figures packages
+
+\usepackage{float}
+\usepackage{caption}
+	\captionsetup{
+		format=plain,
+		labelfont=bf,
+		font=small,
+		justification=centering
+	}
+
+%%% Numbers and sets
+
+\newcommand{\E}{\mathrm{e}}
+
+\newcommand{\tx}[1]{\text{#1}}
+
+\begin{document}
+    \pagenumbering{arabic}
+    % Start of class settings ...
+    \renewcommand*{\coursecode}{MCR3U Quiz} % Quiz Title
+    \renewcommand*{\assgnnumber}{2} % Quiz number
+    \renewcommand*{\submdate}{January, 2022} % renew the date
+    \renewcommand*{\studentfname}{\textbf{Name:}} % Student first name
+    \renewcommand*{\studentlname}{} % Student last name
+    %\renewcommand*{\studentnum}{SNumber} % Student number
+
+    \renewcommand\qedsymbol{$\blacksquare$}
+    \setfigpath
+    % End of class settings
+    \pagestyle{crowdmark}
+    \newgeometry{left=18mm, right=18mm, top=22mm, bottom=22mm} % page is set to default values
+    \fancyhfoffset[L,O]{0pt} % header orientation fixed
+    % End of class settings
+    %%% Note to user:
+    % CTRL + F <CHANGE ME:> (without the angular brackets) in CKpreamble to specify graphics paths accordingly.
+    % The command \circled[]{} accepts one optional and one mandatory argument.
+    % Optional argument is for the size of the circle and mandatory argument is for its contents.
+    % \circled{A} produces circled A, with size drawn for letter A. \circled[TT]{A} produces circled A with size drawn for TT.
+    % https://github.com/CalvinKent/My-LaTeX
+    %%%
+    % Crowdmark assignment start
+
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%%%%%%%%%%%%%%%%                  PROBLEM IDEAS                  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    %%%%%                   ----------------------------------------                                %%%%%%%%
+
+    % --> Do a hard tangent line problem
+
+	\maketitle
+	\section{Preamble}
+    This is a quiz covering all of Act 3 from \textit{Julius Caeser}.
+	\section{Allowed Aids}
+  This is a closed book quiz, nothing is allowed.
+	\section{Name and Date:}
+	Print your name and todays date below;
+
+  \vspace*{0.4cm}
+
+	\begin{center}
+	\noindent\begin{tabular}{ll}
+		\makebox[3in]{\hrulefill} & \makebox[3in]{\hrulefill}\\
+		Name & Date\\[8ex]% adds space between the two sets of signatures
+	\end{tabular}
+	\end{center}
+	\newpage
+
+    \begin{qstn}
+      Define the following terms;
+      \begin{enumerate}[label=(\alph*)]
+        \item \textbf{Puissant:} 
+          \vspace*{1cm}
+        \item \textbf{Repealing:}
+          \vspace*{1cm}
+        \item \textbf{Corse:}
+          \vspace*{1cm}
+        \item \textbf{Havoc:}
+          \vspace*{1cm}
+        \item \textbf{Couchings:}
+          \vspace*{1cm}
+      \end{enumerate}
+    \end{qstn}
+
+    \begin{qstn}
+        What does Metellus Cimber ask Caeser?
+    \end{qstn}
+         \vspace*{2cm}
+    \begin{qstn}
+      Why do Cassius and Brutus say they did Caeser a favor a favor by killing him?
+    \end{qstn}
+         \vspace*{4cm}
+    \begin{qstn}
+      After the assassination, Mark Antony sent his servant to talk to Brutus. Why?
+    \end{qstn}
+         \vspace*{5cm}
+    \begin{qstn}
+        Who stabs Caeser first and last?
+    \end{qstn}
+         \vspace*{2cm}
+    \begin{qstn}
+       What does Antony predict will happen because of Caeser's death?
+    \end{qstn}
+         \vspace*{5cm}
+    \begin{qstn}
+       Who is Octavius Ceasear?
+    \end{qstn}
+         \vspace*{5cm}
+    \begin{qstn}
+       What does Antony say to the crowd of people to change their interpretation of Caeser?
+    \end{qstn}
+    \newpage
+    \begin{qstn}
+      Who arrives in Rome at the end of the scene, after Antony's speech?
+    \end{qstn}
+         \vspace*{2cm}
+    \begin{qstn}
+      Antony says "The evil that men do lives after them, The good is oft interred with their bones." What does this mean? Do you agree?
+    \end{qstn}
+         \vspace*{10cm}
+    \begin{qstn}
+      In scene III, who is Cinna? What happens to him?
+    \end{qstn}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

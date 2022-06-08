@@ -1,0 +1,273 @@
+% Prepared by Calvin Kent
+\documentclass[12pt,oneside]{book} %
+\usepackage{CKpreamble}
+\usepackage{CKlecture}
+\usepackage{mdframed}
+\usepackage{import}
+\usepackage{pdfpages}
+\usepackage{euscript}
+\usepackage{transparent}
+\usepackage{xcolor}
+
+\newcommand{\incfig}[2][1]{%
+    \def\svgwidth{#1\columnwidth}
+    \import{./figures/}{#2.pdf_tex}
+}
+
+
+\newcounter{step}[section]
+\newenvironment{step}[1][]
+{\refstepcounter{step} \textit{Step #1.}}
+
+\newcounter{Rule}[section]
+\newenvironment{Rule}[1][]
+{\refstepcounter{Rule} \textit{Rule #1.}}
+
+
+\pdfsuppresswarningpagegroup=1
+
+%
+\renewcommand*{\doctitle}{Class Based Lecture Notes}
+\makeatletter\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}\makeatother % only used in class based
+\begin{document}
+	% Start of Class settings
+	\renewcommand*{\term}{Term 2} % Term
+	\renewcommand*{\coursecode}{MCR3U} % Course code
+	\renewcommand*{\coursename}{Course Name} % Full course name
+	\renewcommand*{\thelecnum}{6} % Lecture number
+	\renewcommand*{\profname}{Prof Name} % Prof Name
+	\renewcommand*{\colink}{http://www.student.math.uwaterloo.ca/~c2kent} % Course outline link
+	% End of Class settings
+	\clearpage
+	\pagenumbering{arabic}
+	\pagestyle{classlecture}
+	%%% Note to user: CTRL + F <CHANGE ME:> (without the angular brackets) in CKpreamble to specify graphics paths accordingly.
+	%%% If a new chapter was started in the middle of a lecture, \fix chap{Second Chapter} must be used immediately above the next lecture.
+	% Course notes start
+\setchap{6}{Radicals and Primes}
+\begin{lec}{January 2022}
+	\chapter{\chapname\chaplec}
+  
+  \section{Primes}
+
+  \begin{defn}
+      Let $x \in \N$. We say that $x$ is \textbf{prime} if its only divisors are $1$ and itself.
+  \end{defn}
+
+  \begin{ex}
+    The following are examples of prime numbers,
+    \[
+          2,3,5,7,11,13,17,19
+    .\] 
+  \end{ex}
+  
+  There are actually an infinite number of primes, however I wont dwell upon this any further as, currently, it serves no
+  benefit.
+
+  \begin{thrm}
+    Let $x \in \N$, such that $x \geq 2$. Then we can factor $x$ into a product of primes known as the
+    \textbf{prime factorization of $x$}.
+  \end{thrm}
+
+  This is actually a very, very, very important result. Mathematicians refer to this as the fundamental theorem of
+  arithmetic.
+
+  \begin{ex}
+    Preform a prime factorization for the following natural numbers.
+    \begin{enumerate}[label=(\alph*)]
+      \item 28.
+      \item 4.
+      \item 5.
+      \item 34 \hfill (**).
+      \item 148 \hfill (**).
+    \end{enumerate}
+  \end{ex}
+
+  \begin{thrm}
+    Let $x$ be a prime number, then \textit{one of its} prime factors will be less than $\sqrt{x}$.
+  \end{thrm}
+
+  This should help narrow down your search when preforming prime factorizations.
+
+  \section{Exponents}
+
+  \textbf{Properties of exponents 1:}
+
+    \begin{Rule}[1]
+      $a^{x}\cdot a^{y} = a^{x + y}$.
+    \end{Rule}
+
+    \begin{Rule}[2]
+      $a^{x}/a^{y} = a^{x - y}$.
+    \end{Rule}
+
+    \begin{Rule}[3]
+        $\left( a^{x} \right)^{y} = a^{x \cdot y} $.
+    \end{Rule}
+
+    \begin{Rule}[4]
+        $a^{-x} = \frac{1}{a^{x}}$.
+    \end{Rule}
+
+    \begin{Rule}[5]
+       $\frac{1}{a^{-x}} = a^{x}$.
+    \end{Rule}
+
+  The aforementioned properties of exponents allow us to simplify exponential expressions.
+
+
+    
+  
+  
+  \newpage
+  
+  \begin{ex}
+    Simplify the following exponential expressions, reduce answers to positive exponents.
+    \begin{enumerate}[label=(\alph*)]
+      \item $-x^2(-x^3)$.
+      \item $(4^{4})^{\frac{1}{2}}$.
+      \item $y^{-4} / y^2$  \hfill (**).
+      \item $2^{-2}$. 
+      \item $(-y)^2(-y)^{-4}$  \hfill (**).
+      \item $\frac{1}{5^{-3}}$  \hfill (**).
+    \end{enumerate}
+  \end{ex}
+
+
+  \textbf{Properties of exponents 2:}
+
+    \begin{Rule}[5]
+      \[
+      \left( a^{x}\cdot b^{y} \right) ^{z} = a^{x \cdot z}\cdot b^{y\cdot z}
+    .\] 
+    \end{Rule}
+
+    \begin{Rule}[6]
+      \[
+      \left( \frac{a^{x}}{b^{y}} \right) ^{z} = \frac{a^{x\cdot z}}{b^{y\cdot z}}
+      .\] 
+    \end{Rule}
+
+  \begin{ex}
+    Simplify the following exponential expressions, reduce answers to positive exponents.
+    \begin{enumerate}[label=(\alph*)]
+      \item $(x^{-2}y^{4})^{2}$.
+      \item $(4y^4x^{-3}x^{6}z^{5})^{2}$  \hfill (**).
+      \item $\left( \frac{x^{-4}}{y^{2}} \right)^{\frac{1}{2}} $.
+    \end{enumerate}
+  \end{ex}
+
+
+  \section{Radicals}
+
+  Radicals refer to expressions with square roots. We are mostly concerned with how to simplify and manipulate such
+  expressions. They key here is to understand the following fact,
+  \[
+      \sqrt[n]{x} = x^{\frac{1}{n}}
+  .\] 
+  So the $n$-th root of $x$ is the same as raising $x$ to the power of $1 / n$. When  $n = 2$, then we simply refer
+  to it as the square root, and we don't normally write the $2$ as you know. To be more explicit,
+  \[
+      \sqrt[2]{x} = \sqrt{x} = x^{\frac{1}{2}}
+  .\] 
+
+   We refer to $x$ as the \textbf{radicand}
+  
+   \newpage
+
+   \textbf{Simplifying Radicals:}
+
+
+  \begin{step}[1]
+    If the radicand is a perfect square, then your done!
+  \end{step}
+  \begin{step}[2]
+    Else divide the radicand by its \textit{prime factors} until you get a perfect square. 
+  \end{step}
+  \begin{step}[3]
+    Simplify using exponent rules.
+  \end{step}
+
+  \begin{ex}
+    Simplify each Radical expression. \textbf{(In class)}
+    \begin{enumerate}[label=(\alph*)]
+      \item $\sqrt{50} $.
+      \item $\sqrt{27} $  \hfill (**).
+      \item $\sqrt{180} $.
+    \end{enumerate}
+  \end{ex}
+
+  \begin{ex}
+    Simplify each Radical expression. \textbf{(In class)}
+    \begin{enumerate}[label=(\alph*)]
+      \item $9\sqrt{7} - 4\sqrt{7}$.
+      \item $4\sqrt{24} -3\sqrt{6}$.
+      \item $5\sqrt{2}  + 3\sqrt{18}$  \hfill (**).
+    \end{enumerate}
+  \end{ex}
+
+  \begin{ex}
+    Simplify each Radical expression. \textbf{(In class)}
+    \begin{enumerate}[label=(\alph*)]
+      \item $\left(2\sqrt{3}\right)\left(3\sqrt{8}\right)$.
+      \item $2\sqrt{3} \left(4 + 5\sqrt{3} \right)$.
+      \item $\left(\sqrt{3} + 5\right)\left(2 -\sqrt{3} \right)$  \hfill (**).
+    \end{enumerate}
+  \end{ex}
+  
+
+	\end{lec}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

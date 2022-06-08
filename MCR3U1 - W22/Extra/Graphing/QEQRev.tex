@@ -1,0 +1,141 @@
+
+
+% Prepared by Calvin Kent
+%
+% Assignment Template v19.02
+%
+%%% 20xx0x/MATHxxx/Crowdmark/Ax
+%
+\documentclass[12pt]{article} %
+\usepackage{amsthm}
+\usepackage{CKpreamble}
+\usepackage{CKassignment}
+\usepackage{mdframed}
+\usepackage{import}
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{xcolor}
+
+\newcommand{\incfig}[2][1]{%
+    \def\svgwidth{#1\columnwidth}
+    \import{./figures/}{#2.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
+
+%
+\begin{document}
+	\pagenumbering{arabic}
+	% Start of class settings ...
+	\renewcommand*{\coursecode}{MATH 235} % renew course code
+	\renewcommand*{\assgnnumber}{Assignment 1} % renew assignment number
+	\renewcommand*{\submdate}{September 14, 2021} % renew the date
+	\renewcommand*{\studentfname}{Abdullah} % Student first name
+	\renewcommand*{\studentlname}{Zubair} % Student last name
+    \renewcommand*{\proofname}{Proof:}
+	% \renewcommand*{\studentnum}{20836288} % Student number
+
+	\renewcommand\qedsymbol{$\blacksquare$}
+	\setfigpath
+	% End of class settings	
+	% \pagestyle{crowdmark}
+	\newgeometry{left=18mm, right=18mm, top=22mm, bottom=22mm} % page is set to default values
+	\fancyhfoffset[L,O]{0pt} % header orientation fixed
+	% End of class settings
+	%%% Note to user:
+	% CTRL + F <CHANGE ME:> (without the angular brackets) in CKpreamble to specify graphics paths accordingly.
+	% The command \circled[]{} accepts one optional and one mandatory argument.
+	% Optional argument is for the size of the circle and mandatory argument is for its contents.
+	% \circled{A} produces circled A, with size drawn for letter A. \circled[TT]{A} produces circled A with size drawn for TT.
+	% https://github.com/CalvinKent/My-LaTeX
+	%%%
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%                        CUSTOM MACRO VIM-TEX                             %%%
+	%%       call IMAP('NOM', '\nomenclature{}', 'tex')               
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	% Crowdmark assignment start
+	% qnumber, qname, qpoints
+
+\begin{center}
+	\textbf{\underline{\Huge{How to Sketch Quadratic Equations}}}
+\end{center}
+
+	\vspace*{0.5cm}
+	Lets say we have a quadratic equation in standard form $y = ax^2 + bx + c$ and we want to sketch it, then preform the following,
+	\begin{enumerate}
+		\item Convert $y$ into vertex form by completing the square \\
+			(Refer to the \emph{How to complete the square sheet} if you are stuck)
+		\item Now you should have a new quadratic in vertex form,
+						\[
+						y = a(x-h)^2 + k
+						.\] 
+						Where the vertex is located at $(h,k)$.
+		\item Label the vertex point on your graph.
+		\item \textbf{IF $a < 0$ ($a$ is negative)} then draw the shape of the parabola in the \emph{downwards} direction starting
+			from the vertex.
+		\item \textbf{ELSE IF $a > 0$ ($a$ is positive)} then draw the shape of the parabola in the \emph{upwards} direction starting
+			from the vertex.
+	\end{enumerate}
+
+\section{Maximum's and Minimums}
+\begin{itemize}
+		\item \textbf{IF $a < 0$ ($a$ is negative)} then we say that the vertex represents a \emph{maximum}.
+			\begin{itemize}
+				\item This makes sense because if $a < 0$, the parabola points down, and the highest point of the parabola must have been
+					the vertex.
+			\end{itemize}
+		\item \textbf{ELSE IF $a > 0$ ($a$ is positive)} then we say that the vertex represents a \emph{minimum}.
+			\begin{itemize}
+				\item This makes sense because if $a > 0$, the parabola points up, and the lowest point of the parabola must have been
+					the vertex.
+			\end{itemize}
+\end{itemize}
+
+\textbf{\underline{\Large{Practice Problems:}}}
+
+Double check your answers by using the graphing website \textbf{Desmos}.(Google it)
+\begin{qstn}
+	Sketch the following Quadratic equations. Label the $y-$intercept of each graph.
+	\begin{enumerate}[label=(\alph*)]
+		\item $y = x^2 - x - 6$
+		\item $y = -4x^2 + 7x - 12$
+		\item $y = 2x^2 + 5x - 3$
+		\item $y = -x^2 + 4x$
+		\item $y = x^2 - 9$ (Isnt this already in vertex form?)
+		\item $y = \frac{2}{3}x - \frac{5}{3}x + \frac{1}{3}$
+	\end{enumerate}
+\end{qstn}
+\begin{qstn}
+	\textbf{(Challenge)} Determine the intersection point of the following two quadratic equations,
+	\begin{align*}
+		y &= x^2 - 5x + 6\\
+		y &= x^2 + x - 6	
+	.\end{align*}
+	(The technique is the same as in the linear case).
+	
+\end{qstn}
+
+
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

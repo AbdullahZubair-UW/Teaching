@@ -1,0 +1,246 @@
+% Prepared by Calvin Kent
+\documentclass[12pt,oneside]{book} %
+\usepackage{CKpreamble}
+\usepackage{CKlecture}
+\usepackage{mdframed}
+\usepackage{import}
+\usepackage{pdfpages}
+\usepackage{euscript}
+\usepackage{transparent}
+\usepackage{xcolor}
+\usepackage{tasks}
+\usepackage{physics}
+\usepackage{tkz-euclide}
+
+
+%%% Maths and science packages
+
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{pgfplots}
+	\usetikzlibrary{
+		calc,
+		patterns,
+		positioning
+	}
+	\pgfplotsset{
+		compat=1.16,
+		samples=200,
+		clip=false,
+		my axis style/.style={
+			axis x line=middle,
+			axis y line=middle,
+			legend pos=outer north east,
+			axis line style={
+				->,
+			},
+			legend style={
+				font=\footnotesize
+			},
+			label style={
+				font=\footnotesize
+			},
+			tick label style={
+				font=\footnotesize
+			},
+			xlabel style={
+				at={
+					(ticklabel* cs:1)
+				},
+				anchor=west,
+				font=\footnotesize,
+			},
+			ylabel style={
+				at={
+					(ticklabel* cs:1)
+				},
+				anchor=west,
+				font=\footnotesize,
+			},
+			xlabel= $x$,
+			ylabel=$\vec d (\m \tx{[East]})$
+		},
+	}
+	\tikzset{
+		>=stealth
+	}
+
+\pgfplotsset{my style/.append style={axis x line=middle, axis y line=
+middle, xlabel={}, ylabel={}, axis equal }}
+
+\newcommand{\incfig}[2][1]{%
+    \def\svgwidth{#1\columnwidth}
+    \import{./figures/}{#2.pdf_tex}
+}
+
+
+\newcounter{step}[section]
+\newenvironment{step}[1][]
+{\refstepcounter{step} \textit{Step #1.}}
+
+\newcounter{Rule}[section]
+\newenvironment{Rule}[1][]
+{\refstepcounter{Rule} \textit{Rule #1.}}
+
+
+\pdfsuppresswarningpagegroup=1
+
+%
+\renewcommand*{\doctitle}{Class Based Lecture Notes}
+\makeatletter\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}\makeatother % only used in class based
+\begin{document}
+	% Start of Class settings
+	\renewcommand*{\term}{Term 2} % Term
+	\renewcommand*{\coursecode}{MCR3U} % Course code
+	\renewcommand*{\coursename}{Course Name} % Full course name
+	\renewcommand*{\thelecnum}{8} % Lecture number
+	\renewcommand*{\profname}{Prof Name} % Prof Name
+	\renewcommand*{\colink}{http://www.student.math.uwaterloo.ca/~c2kent} % Course outline link
+	% End of Class settings
+	\clearpage
+	\pagenumbering{arabic}
+	\pagestyle{classlecture}
+	%%% Note to user: CTRL + F <CHANGE ME:> (without the angular brackets) in CKpreamble to specify graphics paths accordingly.
+	%%% If a new chapter was started in the middle of a lecture, \fix chap{Second Chapter} must be used immediately above the next lecture.
+	% Course notes start
+\setchap{8}{Triangles for Examples}
+\begin{lec}{January 2022}
+	\chapter{\chapname\chaplec}
+  \begin{ex*}[8.3] \texttt{  }
+    \begin{enumerate}[label=(\alph*)]
+      \item \texttt{  }
+        \begin{center}
+          \begin{tikzpicture}[thick]
+          \coordinate (A) at (0,0);
+          \coordinate (C) at (15,5);
+          \coordinate (B) at (15,0);
+
+          \draw[black] (A) -- (C) node[circle,fill,inner sep=2pt]{} node[above]{$C$};
+          \draw[black] (A) -- (B) node[circle,black,fill,inner sep=2pt]{} node[right]{$B$};
+          \draw[black] (B) -- (C) node[circle,black,fill,inner sep=2pt]{};
+          \draw[black] (A) node[circle,black,fill,inner sep=2pt]{} node[above]{$A$};
+
+          \tkzMarkRightAngle[size=0.4,opacity=0.9](A,B,C)% square angle here
+
+          \end{tikzpicture}
+      \end{center}
+
+      \item \texttt{}
+
+        \begin{center}
+          \begin{tikzpicture}[thick]
+          \coordinate (A) at (0,0);
+          \coordinate (C) at (15,5);
+          \coordinate (B) at (15,0);
+
+          \draw[black] (A) -- (C) node[circle,fill,inner sep=2pt]{} node[above]{$C$};
+          \draw[black] (A) -- (B) node[circle,black,fill,inner sep=2pt]{} node[right]{$B$};
+          \draw[black] (B) -- (C) node[circle,black,fill,inner sep=2pt]{};
+          \draw[black] (A) node[circle,black,fill,inner sep=2pt]{} node[above]{$A$};
+
+          \tkzMarkRightAngle[size=0.4,opacity=0.9](A,B,C)% square angle here
+
+          \end{tikzpicture}
+      \end{center}
+
+    \end{enumerate}
+
+  \end{ex*}
+
+  \newpage
+
+  \begin{ex*}[8.4] \texttt{  }
+    \begin{enumerate}[label=(\alph*)]
+      \item \texttt{  }
+        \begin{center}
+          \begin{tikzpicture}[thick]
+          \coordinate (A) at (0,0);
+          \coordinate (C) at (15,5);
+          \coordinate (B) at (15,0);
+
+          \draw[black] (A) -- (C) node[circle,fill,inner sep=2pt]{} node[above]{$C$};
+          \draw[black] (A) -- (B) node[circle,black,fill,inner sep=2pt]{} node[right]{$B$};
+          \draw[black] (B) -- (C) node[circle,black,fill,inner sep=2pt]{};
+          \draw[black] (A) node[circle,black,fill,inner sep=2pt]{} node[above]{$A$};
+
+          \tkzMarkRightAngle[size=0.4,opacity=0.9](A,B,C)% square angle here
+
+          \end{tikzpicture}
+      \end{center}
+
+      \item \texttt{}
+
+        \begin{center}
+          \begin{tikzpicture}[thick]
+          \coordinate (A) at (0,0);
+          \coordinate (C) at (15,5);
+          \coordinate (B) at (15,0);
+
+          \draw[black] (A) -- (C) node[circle,fill,inner sep=2pt]{} node[above]{$C$};
+          \draw[black] (A) -- (B) node[circle,black,fill,inner sep=2pt]{} node[right]{$B$};
+          \draw[black] (B) -- (C) node[circle,black,fill,inner sep=2pt]{};
+          \draw[black] (A) node[circle,black,fill,inner sep=2pt]{} node[above]{$A$};
+
+          \tkzMarkRightAngle[size=0.4,opacity=0.9](A,B,C)% square angle here
+
+          \end{tikzpicture}
+      \end{center}
+
+    \end{enumerate}
+
+  \end{ex*}
+
+	\end{lec}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

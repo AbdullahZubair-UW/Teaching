@@ -1,0 +1,236 @@
+% Prepared by Calvin Kent
+\documentclass[12pt,oneside]{book} %
+\usepackage{CKpreamble}
+\usepackage{CKlecture}
+\usepackage{mdframed}
+\usepackage{import}
+\usepackage{pdfpages}
+\usepackage{euscript}
+\usepackage{transparent}
+\usepackage{xcolor}
+
+
+\newcommand{\incfig}[2][1]{%
+    \def\svgwidth{#1\columnwidth}
+    \import{./figures/}{#2.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
+%
+\renewcommand*{\doctitle}{Class Based Lecture Notes}
+\makeatletter\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}\makeatother % only used in class based
+\begin{document}
+	% Start of Class settings
+	\renewcommand*{\term}{Term 2} % Term
+	\renewcommand*{\coursecode}{MCR3U} % Course code
+	\renewcommand*{\coursename}{Course Name} % Full course name
+	\renewcommand*{\thelecnum}{5} % Lecture number
+	\renewcommand*{\profname}{Prof Name} % Prof Name
+	\renewcommand*{\colink}{http://www.student.math.uwaterloo.ca/~c2kent} % Course outline link
+	% End of Class settings
+	\clearpage
+	\pagenumbering{arabic}
+	\pagestyle{classlecture}
+	%%% Note to user: CTRL + F <CHANGE ME:> (without the angular brackets) in CKpreamble to specify graphics paths accordingly.
+	%%% If a new chapter was started in the middle of a lecture, \fix chap{Second Chapter} must be used immediately above the next lecture.
+	% Course notes start
+\setchap{5}{Transformations of Functions}
+\begin{lec}{January 2022}
+	\chapter{\chapname\chaplec}
+  In this lecture we will study the notion of transformations of functions. By \textit{transformation} we mean how
+  the graph of a function transforms from one state to the other, either by a translation, stretch,
+  compression, and so on. This topic involves a lot of
+  sketching and graphing, therefore I have some tips to share before we proceed.
+
+
+  \textbf{Tip 1.} Try using a variety of colours to differentiate
+  between the original function and the various transformed functions in your sketches. 
+
+  \textbf{Tip 2.} Try your best to use graph paper. \textbf{(Ask me if you need some)}
+
+  \section{Vertical Shifting}
+  Let $f(x)$ be a function and $c \in \R$. Then the function $h(x) = f(x) + c$ is is a \textbf{vertical shift }of $f(x)$,
+  where each coordinate is transformed to : $(x,f(x)) \rightarrow \left(x, f(x) + c\right)$.
+  \begin{itemize}
+    \item \textbf{If } $c > 0$, then we say $f(x)$ has been \textbf{shifted upwards} by $\left|c\right|$ units.
+    \item \textbf{Else If } $c < 0$, then we say $f(x)$ has been \textbf{shifted downwards} by $\left|c\right|$ units.
+  \end{itemize}
+
+  \begin{ex}
+    Let $f(x) = x^2$. Sketch and describe each transformation below. \textbf{(In class)}
+    \begin{enumerate}[label=(\alph*)]
+      \item $h(x) = f(x) + 3$.
+      \item $r(x) = f(x) - 5$  \hfill \textbf{(** With Class)}
+    \end{enumerate}
+  \end{ex}
+
+  \section{Horizontal Shifting}
+  Let $f(x)$ be a function and $c \in \R$. Then the function $h(x) = f(x + c)$ is is a \textbf{horizontal shift }of $f(x)$,
+  where each coordinate is transformed to : $(x,f(x)) \rightarrow \left(x - c, f(x)\right)$.
+  \begin{itemize}
+    \item \textbf{If } $c > 0$, then we say $f(x)$ has been \textbf{shifted left} by $\left|c\right|$ units.
+    \item \textbf{Else If } $c < 0$, then we say $f(x)$ has been \textbf{shifted right} by $\left|c\right|$ units.
+  \end{itemize}
+
+  \begin{ex}
+    Let $f(x) = \sqrt{x} $. Sketch and describe each transformation below. \textbf{(In class)}
+    \begin{enumerate}[label=(\alph*)]
+      \item $h(x) = f(x-1)$.
+      \item $r(x) = f(x+4)$ \hfill \textbf{(** With Class)}.
+    \end{enumerate}
+  \end{ex}
+
+  \newpage
+
+  \section{Reflecting Graphs}
+  Let $f(x)$ be a function. Then,
+  \begin{itemize}
+    \item The function $h(x) = f(-x)$ is a \textit{reflection} of $f(x)$ across the \textbf{y-axis}, where each
+      coordinate is transformed to : $(x,f(x)) \rightarrow (-x, f(x))$.
+    \item The function $h(x) = -f(x)$ is a \textit{reflection} of $f(x)$ across the \textbf{x-axis}, where each
+      coordinate is transformed to : $(x,f(x)) \rightarrow (x, -f(x))$.
+  \end{itemize}
+
+  \begin{ex}
+    Let $f(x) = \sqrt{x}$. Sketch and describe each transformation below. \textbf{(In class)}
+    \begin{enumerate}[label=(\alph*)]
+      \item $h(x) = f(-x)$.
+      \item $r(x) = -f(x)$ \hfill \textbf{(** With Class)}.
+    \end{enumerate}
+  \end{ex}
+
+  \section{Vertical Compressions \& Stretches}
+  Let $f(x)$ be a function and $c \in \R$. Then the function $h(x) = cf(x)$ is is a vertical scaling of $f(x)$,
+  where each coordinate is transformed to : $(x,f(x)) \rightarrow \left(x, \left|c\right|\cdot f(x)\right)$.
+  \begin{itemize}
+    \item \textbf{If } $\left|c\right| > 1$, then we say $f(x)$ has been \textbf{vertically stretched} by a factor
+      of $\left|c\right|$. \,\,\,\,\,\,(\cite{col-alg})
+    \item \textbf{If } $0 < \left|c\right| < 1$, then we say $f(x)$ has been \textbf{vertically compressed} by a factor
+      of $1 / \left|c\right|$. \hspace*{14.7cm}(\cite{col-alg})
+  \end{itemize}
+
+  \begin{ex}
+    Let $g(x) = \left|x\right|$. Sketch and describe each transformation below. \textbf{(In class)}
+    \begin{enumerate}[label=(\alph*)]
+      \item $h(x) = 2g(x)$.
+      \item $r(x) = \frac{2}{3}g(x)$ \hfill \textbf{(** With Class)}.
+    \end{enumerate}
+  \end{ex}
+
+
+
+  \section{Horizontal Compressions \& Stretches}
+  Let $f(x)$ be a function and $c \in \R$. Then the function $h(x) = f(cx)$ is is a horizontal scaling of $f(x)$,
+  where each coordinate is transformed to : $(x,f(x)) \rightarrow \left(x / \left|c\right| ,f(x)\right)$.
+  \begin{itemize}
+    \item \textbf{If } $\left|c\right| > 1$, then we say $f(x)$ has been \textbf{horizontally compressed} by a factor
+      of $\left|c\right|$. \hspace*{14.7cm}(\cite{col-alg})
+    \item \textbf{If } $0 < \left|c\right| < 1$, then we say $f(x)$ has been \textbf{horizontally stretched} by a factor
+      of $1 / \left|c\right|$. \hspace*{14.7cm}(\cite{col-alg})
+  \end{itemize}
+
+  \newpage
+
+  \begin{ex}
+    Let $f(x) = \sqrt{x}$. Sketch and describe each transformation below. \textbf{(In class)}
+    \begin{enumerate}[label=(\alph*)]
+      \item $h(x) = f(3x)$.
+      \item $r(x) = f(\frac{1}{2}x)$ \hfill \textbf{(** With Class)}.
+    \end{enumerate}
+  \end{ex}
+
+  At this point we can analyse combinations of transformations, involving both horizontal and vertical shifts.
+
+  \begin{thrm}
+    (Transformations \cite{col-alg}) Let $f(x)$ be a function and let $A,B,H,K \in \R$. Then the function,
+    \[
+        h(x) = Af (Bx + H) + K
+    .\] 
+    is a transformation of $f(x)$, where each coordinate is transformed to :
+    \[
+          (x,f(x)) \longrightarrow \left(\frac{x-H}{B}, Af(x) + K\right)
+    .\] 
+  \end{thrm}
+
+  \textbf{Note:} In order to describe such a transformation, you \textbf{must} factor the transformed function,
+  \[
+        h(x) = Af \left(B\left( x + \frac{H}{B} \right) \right) + K
+  .\] 
+  Where,
+  \begin{itemize}
+    \item $A$ is the vertical scaling factor, which could include a reflection.
+    \item $B$ is the horizontal scaling factor, which could include a reflection.
+    \item $H / B$ is the horizontal shifting factor.
+    \item $K$ is the vertical shifting factor.
+  \end{itemize}
+
+  \begin{ex}
+    Sketch and describe each transformation below. \textbf{(In class)}
+    \begin{enumerate}[label=(\alph*)]
+      \item $f(x) = \left|x\right|$, Transformation $\colon$ $r(x) = -f\left(\frac{1}{2}x - 3\right) + 1$.
+      \item $f(x) = \sqrt{x}$, Transformation $\colon$ $h(x) = \frac{1}{2}f(-4x + 16) - 2$ \hfill \textbf{(** With Class)}.
+    \end{enumerate}
+  \end{ex}
+
+
+
+
+	\end{lec}
+
+
+\bibliographystyle{plain} % We choose the "plain" reference style
+\bibliography{l5bib} % Entries are in the refs.bib file
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

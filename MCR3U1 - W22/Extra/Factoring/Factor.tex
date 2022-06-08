@@ -1,0 +1,241 @@
+% Prepared by Calvin Kent
+%
+% Assignment Template v19.02
+%
+%%% 20xx0x/MATHxxx/Crowdmark/Ax
+%
+\documentclass[12pt]{article} %
+\usepackage{amsthm}
+\usepackage{CKpreamble}
+\usepackage{CKassignment}
+\usepackage{mdframed}
+\usepackage{import}
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{xcolor}
+
+
+
+\newcommand{\incfig}[2][1]{%
+    \def\svgwidth{#1\columnwidth}
+    \import{./figures/}{#2.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
+\newcounter{step}[section]
+\newenvironment{step}[1][]
+{\refstepcounter{step} \textbf{Step #1.}}
+
+
+%
+\begin{document}
+	\pagenumbering{arabic}
+	% Start of class settings ...
+	\renewcommand*{\coursecode}{MATH 235} % renew course code
+	\renewcommand*{\assgnnumber}{Assignment 1} % renew assignment number
+	\renewcommand*{\submdate}{September 14, 2021} % renew the date
+	\renewcommand*{\studentfname}{Abdullah} % Student first name
+	\renewcommand*{\studentlname}{Zubair} % Student last name
+    \renewcommand*{\proofname}{Proof:}
+	% \renewcommand*{\studentnum}{20836288} % Student number
+
+	\renewcommand\qedsymbol{$\blacksquare$}
+	\setfigpath
+	% End of class settings	
+	% \pagestyle{crowdmark}
+	\newgeometry{left=18mm, right=18mm, top=22mm, bottom=22mm} % page is set to default values
+	\fancyhfoffset[L,O]{0pt} % header orientation fixed
+	% End of class settings
+	%%% Note to user:
+	% CTRL + F <CHANGE ME:> (without the angular brackets) in CKpreamble to specify graphics paths accordingly.
+	% The command \circled[]{} accepts one optional and one mandatory argument.
+	% Optional argument is for the size of the circle and mandatory argument is for its contents.
+	% \circled{A} produces circled A, with size drawn for letter A. \circled[TT]{A} produces circled A with size drawn for TT.
+	% https://github.com/CalvinKent/My-LaTeX
+	%%%
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%                        CUSTOM MACRO VIM-TEX                             %%%
+	%%       call IMAP('NOM', '\nomenclature{}', 'tex')               
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	% Crowdmark assignment start
+	% qnumber, qname, qpoints
+
+\begin{center}
+		\Huge{\underline{\textbf{Review on Factoring}}}
+\end{center}
+
+\section{Difference of Squares factoring $(f(x) = ax^2 + c)$}
+\textbf{IF} $c < 0$ then you can factor the quadratic as follows,
+\[
+    f(x) = \left(\sqrt{a} x + \sqrt{\left|c\right|} \right)\left(\sqrt{a} x - \sqrt{\left|c\right|} \right)
+.\] 
+
+\textbf{ELSE IF} $a < 0$ then you can factor the quadratic as follows,
+\[
+    f(x) = -\left(\sqrt{\left|a\right|} x + \sqrt{c} \right)\left(\sqrt{\left|a\right|} x - \sqrt{c} \right)
+.\] 
+
+\section{Simple Factoring $(f(x) = x^2 + bx + c)$}
+\textbf{IF} $a = 1$, then the factoring is known as 'simple' because the procedure is quite straight forward. As such we call
+quadratics with $a = 1$ simple trinomials. So assume that we are working
+with a quadratic function with $a = 1$,
+ \[
+        f(x) = x^2 + bx + c
+.\]
+\begin{step}[1] Find the integers $p,q$ such that,
+  \begin{align*}
+    p + q &= b\\
+    p \cdot  q & =c
+  .\end{align*}
+\end{step}
+
+\begin{step}[2]
+  Factor the quadratic as follows,
+  \[
+        f(x) = (x + q)(x + p)
+  .\] 
+\end{step}
+
+\section{Non-Simple Factoring (FIXED) $(f(x) = ax^2 + bx + c)$}
+\textbf{If }$a \neq 1$ then proceed with the following steps,
+
+
+\begin{step}[1] \textbf{IF} $b$ \textbf{and} $c$ are divisible by $a$, then factor $a$ out of the polynomial. Then apply simple
+  factoring to the polynomial leftover and your done!
+\end{step}
+
+\begin{step}[2]
+  \textbf{ELSE}, find the integers $p,q$ such that,
+  \begin{align*}
+    p + q &= b\\
+    p\cdot q &= ac
+  .\end{align*}
+\end{step}
+
+
+\begin{step}[3]
+Then ,
+\begin{itemize}
+  \item Find the $\gcd \left(\left| a\right| , \left| p\right|\right)$, let that integer be $t$.
+  \item Find the $\gcd \left(\left| q\right| , \left| c\right|\right)$, let that integer be $k$.
+\end{itemize}
+
+\end{step}
+
+\begin{step}[4]
+  \textbf{IF $a \cdot q > 0$}, then complete the factorization by writing,
+  \[
+        f(x) = \left( tx + k \right)  \left( \frac{a}{t}x + \frac{p}{t} \right) 
+  .\] 
+\end{step}
+
+\begin{step}[5]
+  \textbf{ELSE IF $a \cdot q < 0$}, then complete the factorization by writing,
+  \[
+        f(x) = \left( tx - k \right)  \left( \frac{a}{t}x + \frac{p}{t} \right) 
+  .\] 
+\end{step}
+
+\textbf{\underline{\Large{Practice Problems:}}}\\
+Completely factor the following quadratics. (I will typeset the solutions to these problems soon, just ask me in class if you feel
+uncertain about an answer).
+\begin{enumerate}
+  \item $f(x) = x^2 + 16x + 64$
+  \item $g(x) = -x^2 - 15x - 26$
+  \item $f(x) = 9x^2 - 49$
+  \item $r(x) = 6x^2 + x - 2$
+  \item $g(x) = -9x^2 + 6x - 1$
+  \item $Y(x) = 21x^2 + 27x + 6$
+  \item $I(x) = 12x^2 - 26x - 16$ \hspace*{1cm}(Make life easy by first factoring out a $4$)
+  \item $A(x) = 2x^2 + 7x + 5$
+  \item $f(x) = 4x^2 + 16x + 16$
+  \item $r(x) = -x^2 + 13x - 22$
+  \item $f(x) = 121 - 100x^2$
+  \item $f(x) = 7x^2 + 15 - 18$
+  \item $L(x) = 4 - 9x^2$
+  \item $\Gamma(x) = 12x^2 + 17x + 6$
+  \item $\Lambda(x) = -2x^2 + 8x  + 24$
+  \item $\Phi(x) = -5x^2 + 2x + 7$
+  \item $\Theta(x) = -3x^2 - 9x + 30$
+  \item $\xi(x) = x^2 + 4x - 77$
+  \item $\alpha(x) = 2x^2 - 3x - 14$
+  \item $S(x) = 6x^2 + 5x - 6$
+\end{enumerate}
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

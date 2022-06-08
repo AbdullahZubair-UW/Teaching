@@ -1,0 +1,222 @@
+
+% Prepared by Calvin Kent
+%
+% Assignment Template v19.02
+%
+%%% 20xx0x/MATHxxx/Crowdmark/Ax
+%
+\documentclass[12pt]{article} %
+\usepackage{amsthm}
+\usepackage{CKpreamble}
+\usepackage{CKassignment}
+\usepackage{mdframed}
+\usepackage{import}
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{xcolor}
+
+
+
+\newcommand{\incfig}[2][1]{%
+    \def\svgwidth{#1\columnwidth}
+    \import{./figures/}{#2.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
+\newcounter{step}[section]
+\newenvironment{step}[1][]
+{\refstepcounter{step} \textbf{Step #1.}}
+
+
+%
+\begin{document}
+	\pagenumbering{arabic}
+	% Start of class settings ...
+	\renewcommand*{\coursecode}{MATH 235} % renew course code
+	\renewcommand*{\assgnnumber}{Assignment 1} % renew assignment number
+	\renewcommand*{\submdate}{September 14, 2021} % renew the date
+	\renewcommand*{\studentfname}{Abdullah} % Student first name
+	\renewcommand*{\studentlname}{Zubair} % Student last name
+    \renewcommand*{\proofname}{Proof:}
+	% \renewcommand*{\studentnum}{20836288} % Student number
+
+	\renewcommand\qedsymbol{$\blacksquare$}
+	\setfigpath
+	% End of class settings	
+	% \pagestyle{crowdmark}
+	\newgeometry{left=18mm, right=18mm, top=22mm, bottom=22mm} % page is set to default values
+	\fancyhfoffset[L,O]{0pt} % header orientation fixed
+	% End of class settings
+	%%% Note to user:
+	% CTRL + F <CHANGE ME:> (without the angular brackets) in CKpreamble to specify graphics paths accordingly.
+	% The command \circled[]{} accepts one optional and one mandatory argument.
+	% Optional argument is for the size of the circle and mandatory argument is for its contents.
+	% \circled{A} produces circled A, with size drawn for letter A. \circled[TT]{A} produces circled A with size drawn for TT.
+	% https://github.com/CalvinKent/My-LaTeX
+	%%%
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%                        CUSTOM MACRO VIM-TEX                             %%%
+	%%       call IMAP('NOM', '\nomenclature{}', 'tex')               
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	% Crowdmark assignment start
+	% qnumber, qname, qpoints
+
+\begin{center}
+		\Huge{\underline{\textbf{How to find the x-intercepts (FIXED)}}}
+\end{center}
+\begin{step}[1]
+  Try to factor the quadratic by either,
+  \begin{itemize}
+    \item Difference of Squares factoring.
+    \item Simple factoring.
+    \item Non-Simple factoring.
+  \end{itemize}
+\end{step}
+
+\begin{step}[2]
+  \textbf{IF} the Difference of squares factoring worked, then the x-intercepts will be,
+  \[
+          x_1 = -\frac{\sqrt{\left|c\right|} }{\sqrt{\left|a\right|} }  ,\,\,\,\,\,\, x_2 = \frac{\sqrt{\left|c\right|} }{\sqrt{\left|a\right|} } 
+  .\] 
+
+\end{step}
+
+\begin{step}[3]
+ \textbf{ELSE IF} Simple factoring worked, then the x-intercepts will be,
+  \[
+          x_1 = -q  ,\,\,\,\,\,\, x_2 = -p 
+  .\] 
+\end{step}
+
+\begin{step}[4]
+  \textbf{ELSE IF} Non-Simple factoring worked, 
+  \begin{itemize}
+    \item \textbf{IF $a \cdot q > 0$}, then the x-intercepts will be,
+  \[
+          x_1 = -\frac{k}{t}  ,\,\,\,\,\,\, x_2 = -\frac{p}{a} 
+  .\]
+
+    \item \textbf{ELSE IF $a \cdot q < 0$}, then the x-intercepts will be,
+    \[
+          x_1 = \frac{k}{t}  ,\,\,\,\,\,\, x_2 = -\frac{p}{a} 
+    .\]
+  \end{itemize}
+\end{step}
+
+
+\begin{step}[5]
+  \textbf{ELSE} You will have to resort to the quadratic formula (Which happens to
+  work either way, even if you were just lazy and wanted to use it).\\ 
+
+  Proceed by solving,
+  \[
+        x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} 
+  .\] 
+  From there you will obtain two solutions as your x-intercepts, and your done!
+
+\end{step}
+
+\section{Notion of Solving Quadratic Equations}
+Given a quadratic,
+\[
+    f(x) = ax^2 + bx + c
+.\] When we ask you to \textbf{solve the quadratic}, we mean find the solutions to,
+\[
+    0 = ax^2 + bx + c
+.\] The solutions will be the x-intercepts to the original quadratic  $f(x)$.
+
+\newpage
+
+\textbf{\underline{\Large{Practice Problems:}}}\\
+All of these problems are from the textbook so you can check your answers from there.
+\begin{qstn}
+  \textbf{Textbook, pg 49} Question 1.
+\end{qstn}
+
+\begin{qstn}
+  \textbf{Textbook, pg 49} Question 3.
+\end{qstn}
+
+\begin{qstn}
+  \textbf{Textbook, pg 49} Question 5.
+\end{qstn}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

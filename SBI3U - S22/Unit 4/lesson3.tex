@@ -1,0 +1,153 @@
+% Prepared by Calvin Kent
+\documentclass[12pt,oneside]{book} %
+\usepackage{CKpreamble}
+\usepackage{CKlecture}
+\usepackage{mdframed}
+\usepackage{import}
+\usepackage{pdfpages}
+\usepackage{euscript}
+\usepackage{transparent}
+\usepackage{xcolor}
+
+\newcommand{\incfig}[2][1]{%
+    \def\svgwidth{#1\columnwidth}
+    \import{./figures/}{#2.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
+%
+\renewcommand*{\doctitle}{Class Based Lecture Notes}
+\makeatletter\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}\makeatother % only used in class based
+\begin{document}
+	% Start of Class settings
+	\renewcommand*{\term}{Term 2} % Term
+	\renewcommand*{\coursecode}{MCR3U} % Course code
+	\renewcommand*{\coursename}{Course Name} % Full course name
+	\renewcommand*{\thelecnum}{4} % Lecture number
+	\renewcommand*{\profname}{Prof Name} % Prof Name
+	\renewcommand*{\colink}{http://www.student.math.uwaterloo.ca/~c2kent} % Course outline link
+	% End of Class settings
+	\clearpage
+	\pagenumbering{arabic}
+	\pagestyle{classlecture}
+	%%% Note to user: CTRL + F <CHANGE ME:> (without the angular brackets) in CKpreamble to specify graphics paths accordingly.
+	%%% If a new chapter was started in the middle of a lecture, \fix chap{Second Chapter} must be used immediately above the next lecture.
+	% Course notes start
+\setchap{3}{Arthropods}
+\begin{lec}{March 20222}
+	\chapter{\chapname\chaplec}
+  \textbf{Arthropods:} \textit{Animals with segmented bodies, allowing them to
+    turn and manevour in very precise ways.}
+
+
+  \textbf{Exoskeleton:} \textit{A hard outer body covering}.
+
+  \textbf{Molting:} \textit{The name of the process in which arthropods shed and rebuild their outer shells}
+
+  \textbf{Spermatophores:} Capsules that contain sperm cells.
+
+  \subsection*{4 Different Classes  of Arthropods}
+
+  \begin{itemize}
+    \item \textbf{Crustaceans:} Crabs, shrimp and lobsters.
+    \item \textbf{Chelicerates:} Scorpions, spiders and ticks.
+    \item \textbf{Myriapods:} Centipedes and millipedes.
+    \item \textbf{Insects:} Flies and Bees
+  \end{itemize}
+  
+  \subsection*{Crustaceans}
+  Arthropods which contain a head, a thorax and an abdomen.\newline
+
+  \textbf{Abdomen:} \textit{The part of animal's body that contains the stomach and
+  intestines.}
+  
+  \textbf{Thorax:} \textit{The part of the animal which usually contains the heart and
+    lungs. (Often found between the neck and the abdomen).}
+  
+  \subsection*{Chelicerates}
+  Arthropods which have a cephalothorax, an abdomen and a jawline structure called the chelicera.
+
+  \textbf{Cephalothorax:} \textit{The fused head and throax of arthropods.}
+  
+  \textbf{Chelicera:} \textit{Jawlike structure often shaped as articulated fangs. (Head of a spider)}
+
+  \textbf{Pedipalps:} \textit{Appendages that are close to the chelicera, help with taste and smell as well as working
+    as external weapons. (Think spiders again)}
+
+  \newpage
+
+  \subsection*{Myriapods}
+  Arthropods with very long segmented bodies, and a pair of antennae. Each segment of their bodies have a pair of legs,
+  and, depending on the type of body, myriads can have anywhere between 10 to 750 legs.
+
+  Examples: Millipedes, centipedes.
+
+
+  \subsection*{Insects}
+
+  Of the most common arthropods. Bodies are divided into three segments;
+
+  \begin{enumerate}
+    \item \textbf{Head:} Containing a pair of antennae.
+    \item \textbf{Thorax:} Containing six legs and sometimes a pair of wings.
+    \item \textbf{abdomen} 
+  \end{enumerate}
+
+
+  \textbf{Metamorphosis:} \textit{A process in which an organism passes through three or four distinct life phases.}
+
+  \underline{Processes of development (Difference of opinion):}
+  \begin{enumerate}
+    \item \textbf{Egg:} Beginning stage of life 
+    \item \textbf{Larva:} Secondary stage, primary goals are to consume as much energy as possible while undergoing processes
+    such as molting and separating of cells.
+    \item \textbf{Pupa:} Inactive immature state prior to adult stage, larval cells die off to provide energy for the
+    processes involved in the development of the final stage.
+    \item \textbf{Adult:} Final stage of development.
+  \end{enumerate}
+  
+
+
+  
+
+
+  
+
+
+
+  
+
+  
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	\end{lec}
+
+\end{document}
+

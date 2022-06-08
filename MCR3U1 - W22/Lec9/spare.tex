@@ -1,0 +1,89 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%     Triangle With right triangle labeled %%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+   \begin{center}
+    \begin{tikzpicture}
+
+      \begin{axis}[
+          my style,
+          ytick=\empty,
+          xtick=\empty,
+          xticklabels=\empty,
+          yticklabels=\empty,
+        ]
+
+      \draw (axis cs: 0, 0) circle [radius=2];% I've set the radius to 10 only for better show the image
+      \draw (45:2) node[circle,fill,draw,inner sep=2pt] {};
+      \draw (45:2) node[right,circle,inner sep=2pt]{$\textbf{P}(x,y)$};
+
+      \addplot[domain=-2.5:2.5, white]{-x};
+        
+      \coordinate (A) at (0,0);
+      \coordinate (B) at (1.4142135,0);
+      \coordinate (C) at (1.4142135,1.4142135);
+
+      \draw[black] (A) -- (C) node[circle,fill,inner sep=2pt]{} node[midway,above]{$r$};
+      \draw[black] (A) -- (B) node[circle,black,inner sep=2pt]{} node[midway,below]{$x$};
+      \draw[black] (B) -- (C) node[circle,black,fill,inner sep=2pt]{} node[midway,right]{$y$};
+
+      \end{axis}
+      \tkzMarkAngle[fill= orange,size=0.7cm,->](B,A,C)
+      \tkzLabelAngle[pos = 1](B,A,C){$\theta$}
+
+      \tkzMarkRightAngle[size=0.2,opacity=0.9](C,B,A)% square angle here
+
+    \end{tikzpicture}
+   \end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%
+
+   
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%     Triangle With right triangle labeled  In quadrant II%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+   \begin{center}
+    \begin{tikzpicture}
+
+      \begin{axis}[
+          my style,
+          ytick=\empty,
+          xtick=\empty,
+          xticklabels=\empty,
+          yticklabels=\empty,
+        ]
+
+      \draw (axis cs: 0, 0) circle [radius=2];% I've set the radius to 10 only for better show the image
+      \draw (120:2) node[circle,fill,draw,inner sep=2pt] {};
+      \draw (120:2) node[left,circle,inner sep=2pt]{$\textbf{P}(x,y)$};
+
+      \addplot[domain=-2.5:2.5, white]{-x};
+        
+      \coordinate (A) at (0,0);
+      \coordinate (B) at (-1,0);
+      \coordinate (C) at (-1,1.7320508);
+      \coordinate (P) at (2,0);
+
+      \draw[black] (A) -- (C) node[circle,fill,inner sep=2pt]{} node[midway,right]{$r$};
+      \draw[black] (A) -- (B) node[circle,black,inner sep=2pt]{} node[midway,below]{$x$};
+      \draw[black] (B) -- (C) node[circle,black,fill,inner sep=2pt]{} node[midway,left]{$y$};
+
+      \end{axis}
+      \tkzMarkAngle[fill= orange,size=0.7cm,->](P,A,C)
+      \tkzLabelAngle[pos = 1](P,A,C){$\theta$}
+
+      \tkzMarkAngle[fill= orange,size=0.7cm,-](C,A,B)
+      \tkzLabelAngle[pos = 1](C,A,B){$\alpha$}
+
+      \tkzMarkRightAngle[size=0.2,opacity=0.9](C,B,A)% square angle here
+
+    \end{tikzpicture}
+   \end{center}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%

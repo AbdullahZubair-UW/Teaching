@@ -1,0 +1,318 @@
+
+% Prepared by Calvin Kent
+%
+% Assignment Template v19.02
+%
+%%% 20xx0x/MATHxxx/Crowdmark/Ax
+%
+\documentclass[12pt]{article} %
+\usepackage{amsthm}
+\usepackage{CKpreamble}
+\usepackage{CKassignment}
+\usepackage{mdframed}
+\usepackage{euscript}
+\usepackage{tikz}
+\usepackage{pgfplots}
+
+%
+\begin{document}
+	\pagenumbering{arabic}
+	% Start of class settings ...
+	\renewcommand*{\coursecode}{MATH 235} % renew course code
+	\renewcommand*{\assgnnumber}{Assignment 1} % renew assignment number
+	\renewcommand*{\submdate}{September 14, 2021} % renew the date
+	\renewcommand*{\studentfname}{Abdullah} % Student first name
+	\renewcommand*{\studentlname}{Zubair} % Student last name
+    \renewcommand*{\proofname}{Proof:}
+	% \renewcommand*{\studentnum}{20836288} % Student number
+
+	\renewcommand\qedsymbol{$\blacksquare$}
+	\setfigpath
+	% End of class settings	
+	% \pagestyle{crowdmark}
+	\newgeometry{left=18mm, right=18mm, top=22mm, bottom=22mm} % page is set to default values
+	\fancyhfoffset[L,O]{0pt} % header orientation fixed
+	% End of class settings
+	%%% Note to user:
+	% CTRL + F <CHANGE ME:> (without the angular brackets) in CKpreamble to specify graphics paths accordingly.
+	% The command \circled[]{} accepts one optional and one mandatory argument.
+	% Optional argument is for the size of the circle and mandatory argument is for its contents.
+	% \circled{A} produces circled A, with size drawn for letter A. \circled[TT]{A} produces circled A with size drawn for TT.
+	% https://github.com/CalvinKent/My-LaTeX
+	%%%
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%                        CUSTOM MACRO VIM-TEX                             %%%
+	%%       call IMAP('NOM', '\nomenclature{}', 'tex')               
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	% Crowdmark assignment start
+	% qnumber, qname, points
+
+\begin{center}
+	\textbf{\underline{\Huge{Solutions - Lecture 4 - Homework}}}
+\end{center}
+
+\begin{qstn}
+  \begin{solution}
+    Yes it is true that the inverse function for the identity function $\operatorname{id}_\R$ is $\operatorname{id}_\R$.
+    We can provide proof for this claim quite simply by confirming that both conditions from Definition 4.1 hold,
+    \begin{enumerate}
+      \item For all $x \in \R$, $\operatorname{id}_\R(\operatorname{id}_\R(x)) = \operatorname{id}_\R(x) = x$.
+      \item For all $x \in \R$, $\operatorname{id}_\R(\operatorname{id}_\R(x)) = \operatorname{id}_\R(x) = x$.
+    \end{enumerate}
+  \end{solution}
+\end{qstn}
+
+\begin{qstn}
+\begin{prf}
+  Proceeding with mapping tables,
+  \begin{center}
+    \begin{tabular}{c|c}
+  \text{$\mathcal{V}$} & \text{$\mathcal{L}^{-1}\left( \mathcal{L}(v) \right) $}\\\hline 
+        $1$ & $\mathcal{L}^{-1}\left( \mathcal{L}(1) \right) =  \mathcal{L}^{-1}\left( 3 \right) = (3-2)^2 = 1$\\
+        $4$ & $\mathcal{L}^{-1}\left( \mathcal{L}(4) \right) =  \mathcal{L}^{-1}\left( 4 \right) = (4-2)^2 = 4$\\
+        $9$ & $\mathcal{L}^{-1}\left( \mathcal{L}(9) \right) =  \mathcal{L}^{-1}\left( 5 \right) = (5-2)^2 = 9$\\
+        $25$ & $\mathcal{L}^{-1}\left( \mathcal{L}(25) \right) =  \mathcal{L}^{-1}\left( 7 \right) = (7-2)^2 = 25$\\
+        $49$ & $\mathcal{L}^{-1}\left( \mathcal{L}(49) \right) =  \mathcal{L}^{-1}\left( 9 \right) = (9-2)^2 = 49$
+ 	\end{tabular}
+
+  \vspace*{0.5cm}
+
+    \begin{tabular}{c|c}
+  \text{$\mathcal{W}$} & \text{$\mathcal{L}\left( \mathcal{L}^{-1}(w) \right) $}\\\hline 
+        $5$ & $\mathcal{L}\left( \mathcal{L}^{-1}(5) \right) =  \mathcal{L}\left( 9 \right) = \sqrt{9}+2 = 5$\\
+        $4$ & $\mathcal{L}\left( \mathcal{L}^{-1}(4) \right) =  \mathcal{L}\left( 4 \right) = \sqrt{4}+2 = 4$\\
+        $7$ & $\mathcal{L}\left( \mathcal{L}^{-1}(7) \right) =  \mathcal{L}\left( 25 \right) = \sqrt{25}+2 = 7$\\
+        $9$ & $\mathcal{L}\left( \mathcal{L}^{-1}(9) \right) =  \mathcal{L}\left( 49 \right) = \sqrt{49}+2 = 9$\\
+        $3$ & $\mathcal{L}\left( \mathcal{L}^{-1}(3) \right) =  \mathcal{L}\left( 1 \right) = \sqrt{1}+2 = 3$
+ 	\end{tabular}
+\end{center}
+By our results from the mapping tables, we conclude that $\mathcal{L}^{-1}(w) = (w-2)^2$ is indeed the inverse function
+of $\mathcal{L}$.
+
+\end{prf}
+\end{qstn}
+
+
+\begin{qstn}
+\begin{prf}
+  Proceeding with mapping tables,
+  \begin{center}
+    \begin{tabular}{c|c}
+  \text{$\mathcal{V}$} & \text{$\mathcal{T}^{-1}\left( \mathcal{T}(v) \right) $}\\\hline 
+        $-1$ & $\mathcal{T}^{-1}\left( \mathcal{T}(-1) \right) =  \mathcal{T}^{-1}\left( 1 \right) = 2(1) / (1-3) = -1$\\
+        $0$ & $\mathcal{T}^{-1}\left( \mathcal{T}(0) \right) =  \mathcal{T}^{-1}\left( 0 \right) = 2(0) / (0-3) = 0$\\
+        $1$ & $\mathcal{T}^{-1}\left( \mathcal{T}(1) \right) =  \mathcal{T}^{-1}\left( -3 \right) = 2(-3) / (-3-3) = 1$\\
+        $5$ & $\mathcal{T}^{-1}\left( \mathcal{T}(5) \right) =  \mathcal{T}^{-1}\left( 5 \right) = 2(5) / (5-3) = 5$\\
+        $8$ & $\mathcal{T}^{-1}\left( \mathcal{T}(8) \right) =  \mathcal{T}^{-1}\left( 4 \right) = 2(4) / (4-3) = 8$\\
+ 	\end{tabular}
+
+    \begin{tabular}{c|c}
+  \text{$\mathcal{W}$} & \text{$\mathcal{T}\left( \mathcal{T}^{-1}(w) \right) $}\\\hline 
+        $-3$ & $\mathcal{T}\left( \mathcal{T}^{-1}(-3) \right) =  \mathcal{T}\left( 1 \right) = 3(1) / (1-2) = -3$\\
+        $0$ & $\mathcal{T}\left( \mathcal{T}^{-1}(0) \right) =  \mathcal{T}\left( 0 \right) = 3(0) / (0-2) = 0$\\
+        $1$ & $\mathcal{T}\left( \mathcal{T}^{-1}(1) \right) =  \mathcal{T}\left( -1 \right) = 3(-1) / (-1-2) = 1$\\
+        $4$ & $\mathcal{T}\left( \mathcal{T}^{-1}(4) \right) =  \mathcal{T}\left( 8 \right) = 3(8) / (8-2) = 4$\\
+        $5$ & $\mathcal{T}\left( \mathcal{T}^{-1}(5) \right) =  \mathcal{T}\left( 5 \right) = 3(5) / (5-2) = 5$\\
+ 	\end{tabular}
+\end{center}
+By our results from the mapping tables, we conclude that $\mathcal{T}^{-1}(w) = \frac{2w}{w - 4}$ is indeed the inverse function
+of $\mathcal{T}$.
+
+\end{prf}
+\end{qstn}
+
+
+\begin{qstn}
+ \begin{solution}
+   I suspect that the formula is $F(a) = 2a + 4$. In order to check that it this is true, it is sufficient at check
+   that the mapping table for  $F(a) = 2a + 4$ matches our mapping diagram.
+
+\begin{center}
+
+    \begin{tabular}{c|c}
+  \text{$\mathcal{A}$} & \text{$F(a) = 2a + 4 $}\\\hline 
+        $-8$ & $F(-8) = 2(-8) + 4 = -16 + 4 = -12$\\
+        $-2$ & $F(-2) = 2(-2) + 4 = -4 + 4 = 0$\\
+        $4$ & $F(4) = 2(4) + 4 = 8 + 4 = 12$\\
+        $6$ & $F(6) = 2(6) + 4 = 12 + 4 = 16$
+ 	\end{tabular}
+\end{center}
+Since each element in $\mathcal{A}$ is mapped to the correct element in $\mathcal{B}$ with respect to the mapping
+diagram, we conclude that $F(a) = 2a + 4$ is indeed the correct formula for the function.
+
+I claim that $F^{-1}(b) = -2b$ is the inverse function of $F$.
+
+\begin{prf}
+ Its sufficient to check that $F^{-1}(b) = (b - 4) / 2$ satisfies the conditions in Definition 4.1. In order to check that it
+ does, we can use mapping tables.
+
+\begin{center}
+  \begin{tabular}{c|c}
+  \text{$\mathcal{A}$} & \text{$F^{-1}\left( F(a) \right) $}\\\hline 
+    $-8$ & $F^{-1}\left( F(-8) \right) =  F^{-1}\left( -12 \right) = (-12-4) / 2 = -8$\\
+    $-2$ & $F^{-1}\left( F(-2) \right) =  F^{-1}\left( 0 \right) = (0-4) / 2 = -2$\\
+    $4$ & $F^{-1}\left( F(4) \right) =  F^{-1}\left( 12 \right) = (12-4) / 2 = 4$\\
+    $6$ & $F^{-1}\left( F(6) \right) =  F^{-1}\left( 16 \right) = (16-4) / 2 = 6$
+ 	\end{tabular}
+
+  \begin{tabular}{c|c}
+  \text{$\mathcal{B}$} & \text{$F\left( F^{-1}(b) \right) $}\\\hline 
+    $0$ & $F\left( F^{-1}(0) \right) =  F\left( -2 \right) = 2(-2) + 4 = 0$\\
+    $-12$ & $F\left( F^{-1}(-12) \right) =  F\left( -8 \right) = 2(-8) + 4 = -12$\\
+    $16$ & $F\left( F^{-1}(16) \right) =  F\left( 6 \right) = 2(6) + 4 = 16$\\
+    $12$ & $F\left( F^{-1}(12) \right) =  F\left( 4 \right) = 2(4) + 4 = 12$
+ 	\end{tabular}
+\end{center}
+By our results from the mapping tables, we conclude that the claim was correct and that \\$F^{-1}(b) = (b-4) / 2$ is indeed
+the inverse function of $F$.
+
+\end{prf}
+
+\end{solution} 
+\end{qstn}
+
+
+\begin{qstn}
+  \begin{solution}
+    Well first we can talk about how we gain the ability to determine the domain of a function strictly based on 
+    knowledge of the inverse function and the range of the function. For a more more applicable example, suppose we have a 
+    function that goes from Celsius to Fahrenheit. Then of course at times we would also be interested in going from Fahrenheit to Celsius,
+    this would require knowledge of the inverse function. (This would make a great test question\ldots).
+  \end{solution}
+\end{qstn}
+
+\newpage
+
+\begin{qstn}
+  \begin{solution}
+  $f$ is \textbf{not} invertible.
+  \begin{prf}
+    Its easy to show that $f$ fails to be injective, for example note that,
+    \begin{align*}
+      f(-2) &= \left| - 2\right| = 2\\
+      f(2) &= \left|2\right| = 2
+    .\end{align*}
+  Since $f$ fails to be injective, it fails to be invertible.
+  \end{prf}     
+  \end{solution}
+\end{qstn}
+
+\begin{qstn}
+  \begin{solution}
+  Since $G$ is invertible, we know that its both surjective and injective. Both of these properties assert that
+  each element in $\mathcal{B}$ is mapped to from a \textbf{unique} element in $\mathcal{A}$. Since we are given the
+  inverse function $G^{-1}$, we can simply determine the output of each element $b \in \mathcal{B}$ to reconstruct $\mathcal{A}$.
+  We can use mapping tables to help with this,
+
+\begin{center}
+  \begin{tabular}{c|c}
+  \text{$\mathcal{B}$} & \text{$G^{-1}(b)$}\\\hline 
+    $-2$ & $G^{-1}(-2) =  -2 - 2 = -4$\\
+    $-1$ & $G^{-1}(-1) =  -1 - 2 = -3$\\
+    $0$ & $G^{-1}(0) =  0 - 2 = -2$\\
+    $3$ & $G^{-1}(3) =  3 - 2 = 1$\\
+    $7$ & $G^{-1}(7) =  7 - 2 = 5$
+ 	\end{tabular}
+ \end{center}
+ And hence $\mathcal{A} = \{-4,-3,-2,1,5\} $.
+    
+  \end{solution}
+
+\end{qstn}
+
+
+\begin{qstn}
+  \begin{solution} \texttt{ }
+  \begin{enumerate}[label=(\alph*)]
+    \item $\mathbf{S} + \mathbf{T} + 0 = 00101 + 1101 + 0 = 0010111010$.
+    \item $1 + \mathbf{T} + 1 = 1 + 1101 + 1 = 111011$.
+    \item $\epsilon + \mathbf{T} + \mathbf{S} = \epsilon + 1101 + 00101 = 110100101$.
+    \item $\mathbf{T} + \mathbf{T} = 1101 + 1101 = 11011101$.
+  \end{enumerate}
+    
+  \end{solution}
+\end{qstn}
+
+
+\begin{qstn}
+  This is \textbf{false}. An easy counter example is to let $\mathbf{S} = 1$ and $T = 0$, then
+  \begin{align*}
+    \mathbf{S} + \mathbf{T} &= 1 + 0 = 10\\
+        \mathbf{T} + \mathbf{S} &= 0 + 1 = 01
+  .\end{align*} Clearly $\mathbf{S} + \mathbf{T} \neq \mathbf{T} + \mathbf{S}$, hence this is not always true. (Weird right?) 
+\end{qstn}
+
+\begin{qstn}
+  \begin{solution} \texttt{  }
+    \begin{enumerate}[label=(\alph*)]
+      \item $\mathbf{R} = \vb a_1 \vb a_3 \vb a_5 = 101$.
+      \item $\mathbf{Z} = \vb a_1 \vb a_2 = 11$.
+      \item $\mathbf{X} = \vb a_2 \vb a_4 = 11$.
+    \end{enumerate}
+  \end{solution}
+\end{qstn}
+
+\newpage
+
+\begin{qstn}
+  \begin{solution}
+    I claim that $\phi^{-1}(\mathbf{R}) = \vb r_2 \vb r_3$ is the inverse function of $\phi$.
+    \begin{prf}
+ Its sufficient to check that $\phi^{-1}(\mathbf{R}) = \vb r_2 \vb r_3$ satisfies the conditions in Definition 4.1. In order to check that it
+ does, we can use mapping tables.
+
+\begin{center}
+  \begin{tabular}{c|c}
+  \text{$\EuScript{S}$} & \text{$\phi^{-1}\left( \phi(\mathbf{S}) \right) $}\\\hline 
+    $11$ & $\phi^{-1}\left( \phi(11) \right) =  \phi^{-1}\left( 11101 \right) = 11$\\
+    $01$ & $\phi^{-1}\left( \phi(01) \right) =  \phi^{-1}\left( 10101 \right) = 01$\\
+    $10$ & $\phi^{-1}\left( \phi(10) \right) =  \phi^{-1}\left( 11001 \right) = 10$\\
+    $00$ & $\phi^{-1}\left( \phi(00) \right) =  \phi^{-1}\left( 10001 \right) = 00$
+ 	\end{tabular}
+
+  \begin{tabular}{c|c}
+  \text{$\EuScript{R}$} & \text{$\phi\left( \phi^{-1}(\mathbf{R}) \right) $}\\\hline 
+    $10001$ & $\phi\left( \phi^{-1}(10001) \right) =  \phi\left( 00 \right) = 1 + 00 + 0 + 1 = 10001$\\
+    $10101$ & $\phi\left( \phi^{-1}(10101) \right) =  \phi\left( 01 \right) = 1 + 01 + 0 + 1 = 10101$\\
+    $11001$ & $\phi\left( \phi^{-1}(11001) \right) =  \phi\left( 10 \right) = 1 + 10 + 0 + 1 = 11001$\\
+    $11101$ & $\phi\left( \phi^{-1}(11101) \right) =  \phi\left( 11 \right) = 1 + 11 + 0 + 1 = 11101$
+ 	\end{tabular}
+\end{center}
+By our results from the mapping tables, we conclude that the claim was correct and that 
+\\$\phi^{-1}(\mathbf{R}) = \vb r_2 \vb r_3$ is indeed the inverse function of $\phi$.
+
+    \end{prf}
+  \end{solution}
+\end{qstn}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

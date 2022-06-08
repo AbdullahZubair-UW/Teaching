@@ -1,0 +1,197 @@
+% Prepared by Calvin Kent
+%
+% Assignment Template v19.02
+%
+%%% 20xx0x/MATHxxx/Crowdmark/Ax
+%
+\documentclass[12pt]{article} %
+\usepackage{amsthm}
+\usepackage{CKpreamble}
+\usepackage{CKassignment}
+\usepackage{mdframed}
+\usepackage{euscript}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{pdfpages}
+\usepackage{euscript}
+\usepackage{transparent}
+\usepackage{xcolor}
+\usepackage{tasks}
+\usepackage{tkz-euclide}
+
+%
+\begin{document}
+	\pagenumbering{arabic}
+	% Start of class settings ...
+	\renewcommand*{\coursecode}{MATH 235} % renew course code
+	\renewcommand*{\assgnnumber}{Assignment 1} % renew assignment number
+	\renewcommand*{\submdate}{September 14, 2021} % renew the date
+	\renewcommand*{\studentfname}{Abdullah} % Student first name
+	\renewcommand*{\studentlname}{Zubair} % Student last name
+    \renewcommand*{\proofname}{Proof:}
+	% \renewcommand*{\studentnum}{20836288} % Student number
+
+	\renewcommand\qedsymbol{$\blacksquare$}
+	\setfigpath
+	% End of class settings	
+	% \pagestyle{crowdmark}
+	\newgeometry{left=18mm, right=18mm, top=22mm, bottom=22mm} % page is set to default values
+	\fancyhfoffset[L,O]{0pt} % header orientation fixed
+	% End of class settings
+	%%% Note to user:
+	% CTRL + F <CHANGE ME:> (without the angular brackets) in CKpreamble to specify graphics paths accordingly.
+	% The command \circled[]{} accepts one optional and one mandatory argument.
+	% Optional argument is for the size of the circle and mandatory argument is for its contents.
+	% \circled{A} produces circled A, with size drawn for letter A. \circled[TT]{A} produces circled A with size drawn for TT.
+	% https://github.com/CalvinKent/My-LaTeX
+	%%%
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%                        CUSTOM MACRO VIM-TEX                                                      (Word Wrap->
+	%%       call IMAP('NOM', '\nomenclature{}', 'tex')               
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	% Crowdmark assignment start
+	% qnumber, qname, points
+
+\begin{center}
+	\textbf{\underline{\Huge{Lecture 8 - Homework}}}
+\end{center}
+
+\begin{qstn}
+  \textbf{Homework sheet \,\, Q3, Q6, Q8}. 
+\end{qstn}
+
+\begin{qstn}
+  \textbf{Homework sheet \,\, Q9a), Q10a)}. 
+\end{qstn}
+
+\begin{qstn}
+  \textbf{Homework sheet \,\, Q11, Q12, Q13, Q14, Q16}. 
+\end{qstn}
+
+\begin{qstn}
+  Determine the value of the following,
+  \begin{enumerate}[label=(\alph*)]
+    \item $ \cos 60^{\circ}\sin 30^{\circ} + \tan 30^{\circ}\csc 60^{\circ}$
+    \item $ \left( \cos 45^{\circ}\right)^2 + \left( \sin 45^{\circ}\right)^2 $
+    \item $ \cos 30^{\circ}\sec 30^{\circ} + \tan 30^{\circ}\sin 60^{\circ}$
+    \item $ \sec 30^{\circ}\csc 60^{\circ} + 2\left(\cot 30^{\circ}\right)^2$.
+  \end{enumerate}
+\end{qstn}
+
+\begin{qstn}
+  \textbf{Homework sheet \,\, Q31, Q33, Q36}. \\
+  \textbf{Note:} When they say solve the triangle, they mean determine \textbf{all} unknown angles and sides.\\
+  \textbf{Note:} $\pi / 6 = 30^{\circ}$.
+\end{qstn}
+
+\begin{qstn}
+  \textbf{Homework sheet \,\, Q41, Q42, Q44}.
+\end{qstn}
+
+\begin{qstn}
+  (The following problem is from the updated Nelson Functions 11).
+    \begin{enumerate}[label=(\alph*)]
+      \item $\triangle ABC$, $BM = 6$,  $\angle MBC = 60^{\circ}$ and $\tan \alpha = 1$. Determine the
+        \textbf{exact }area of  $\triangle ABC$. 
+        \begin{center}
+          \begin{tikzpicture}[thick]
+          \coordinate (A) at (0,0);
+          \coordinate (B) at (4,4);
+          \coordinate (C) at (15,0);
+          \coordinate (M) at (4,0);
+
+          \draw[black] (A) -- (C) node[circle,fill,inner sep=2pt]{} node[above]{$C$};
+          \draw[black] (A) -- (B) node[circle,black,fill,inner sep=2pt]{} node[above]{$B$};
+          \draw[black] (B) -- (C) node[circle,black,fill,inner sep=2pt]{};
+          \draw[dashed] (B) -- (M) node[circle,black,fill,inner sep=2pt]{} node[midway, left]{$6$};
+          \draw[black] (A) node[circle,black,fill,inner sep=2pt]{} node[above]{$A$};
+          \draw[black] (M) node[circle,black,fill,inner sep=2pt]{} node[below]{$M$};
+
+          \tkzMarkAngle[fill= orange,size=1cm,%
+          opacity=1](C,A,B)
+          \tkzLabelAngle[pos = 1.3](C,A,B){$\alpha$}
+
+          \tkzMarkAngle[fill= orange,size=0.9cm,%
+          opacity=1](M,B,C)
+          \tkzLabelAngle[pos = 1.3](M,B,C){$60^{\circ}$}
+
+          \tkzMarkRightAngle[size=0.4,opacity=0.9](B,M,C)% square angle here
+
+          \end{tikzpicture}
+      \end{center}
+      \item $\triangle SPQ$, $SP = 13$,  $\angle PQS = 45^{\circ}$ and $\cos \beta = \sqrt{3} / 2$. Determine the
+        \textbf{exact }area of  $\triangle SPQ$.
+        \begin{center}
+          \begin{tikzpicture}[thick]
+          \coordinate (S) at (0,0);
+          \coordinate (P) at (6,4);
+          \coordinate (Q) at (15,0);
+          \coordinate (R) at (6,0);
+
+          \draw[black] (S) -- (Q) node[circle,fill,inner sep=2pt]{} node[above]{$Q$};
+          \draw[black] (S) -- (P) node[circle,black,fill,inner sep=2pt]{} node[above]{$P$} node[midway, above]{$13$};
+          \draw[black] (P) -- (Q) node[circle,black,fill,inner sep=2pt]{};
+          \draw[dashed] (P) -- (R) node[circle,black,fill,inner sep=2pt]{};
+          \draw[black] (S) node[circle,black,fill,inner sep=2pt]{} node[above]{$S$};
+          \draw[black] (R) node[circle,black,fill,inner sep=2pt]{} node[below]{$R$};
+
+          \tkzMarkAngle[fill= orange,size=1cm,%
+          opacity=1](S,P,R)
+          \tkzLabelAngle[pos = 1.4](S,P,R){$\beta$}
+
+          \tkzMarkAngle[fill= orange,size=1.4cm,%
+          opacity=1](P,Q,S)
+          \tkzLabelAngle[pos = 1.8](P,Q,S){$45^{\circ}$}
+
+          \tkzMarkRightAngle[size=0.4,opacity=0.9](S,R,P)% square angle here
+
+          \end{tikzpicture}
+      \end{center}
+    \end{enumerate}
+
+
+\end{qstn}
+
+
+
+
+
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

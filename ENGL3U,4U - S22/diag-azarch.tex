@@ -1,0 +1,236 @@
+
+% Prepared by Calvin Kent
+%
+% Assignment Template v19.02
+%
+%%% 20xx0x/MATHxxx/Crowdmark/Ax
+%
+\documentclass[12pt]{article} %
+\usepackage{CKpreamble}
+\usepackage{CKassignment}
+\usepackage{tkz-euclide}
+\usepackage{physunits}
+\usepackage{physics}
+\usepackage{mathtools}
+\usepackage{multicol}
+\usepackage{lmodern}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{pdfpages}
+\usepackage{euscript}
+\usepackage{transparent}
+\usepackage{xcolor}
+\usepackage{tasks}
+\usepackage{tkz-euclide}
+
+\usepackage{pgfplots}
+\usepgfplotslibrary{polar}
+\usepgflibrary{shapes.geometric}
+\usetikzlibrary{calc}
+
+
+\usepackage{euscript}
+\usepackage{microtype}
+\usepackage{upgreek}
+\usepackage[misc]{ifsym}
+
+%%Title
+\title{\textbf{Diagnostic Essay} \\ \textbf{Due Date: } Thursday, Feburary 10}
+\date{}
+
+%%% Maths and science packages
+
+\usepackage{amsmath,amsthm,amssymb}
+\usepackage{pgfplots}
+	\usetikzlibrary{
+		calc,
+		patterns,
+		positioning
+	}
+	\pgfplotsset{
+		compat=1.16,
+		samples=200,
+		clip=false,
+		my axis style/.style={
+			axis x line=middle,
+			axis y line=middle,
+			legend pos=outer north east,
+			axis line style={
+				->,
+			},
+			legend style={
+				font=\footnotesize
+			},
+			label style={
+				font=\footnotesize
+			},
+			tick label style={
+				font=\footnotesize
+			},
+			xlabel style={
+				at={
+					(ticklabel* cs:1)
+				},
+				anchor=west,
+				font=\footnotesize,
+			},
+			ylabel style={
+				at={
+					(ticklabel* cs:1)
+				},
+				anchor=west,
+				font=\footnotesize,
+			},
+			xlabel= $x$,
+			ylabel=$\vec d (\m \tx{[East]})$
+		},
+	}
+	\tikzset{
+		>=stealth
+	}
+
+\pgfplotsset{my style/.append style={axis x line=middle, axis y line=
+middle, xlabel={$t$}, ylabel={$y[\text{m}]$}, axis equal }}
+
+%%% Tables and figures packages
+
+\usepackage{float}
+\usepackage{caption}
+	\captionsetup{
+		format=plain,
+		labelfont=bf,
+		font=small,
+		justification=centering
+	}
+	
+%%% Numbers and sets
+
+\newcommand{\E}{\mathrm{e}}
+
+\newcommand{\tx}[1]{\text{#1}}
+\newcommand{\rem}[1]{\operatorname{rem}{(#1)}}
+
+
+%
+\begin{document}
+	\pagenumbering{arabic}
+	% Start of class settings ...
+	\renewcommand*{\coursecode}{MATH 235} % renew course code
+	\renewcommand*{\assgnnumber}{Assignment 1} % renew assignment number
+	\renewcommand*{\submdate}{September 14, 2021} % renew the date
+	\renewcommand*{\studentfname}{Abdullah} % Student first name
+	\renewcommand*{\studentlname}{Zubair} % Student last name
+    \renewcommand*{\proofname}{Proof:}
+	% \renewcommand*{\studentnum}{20836288} % Student number
+
+	\renewcommand\qedsymbol{$\blacksquare$}
+	\setfigpath
+	% End of class settings	
+	% \pagestyle{crowdmark}
+	\newgeometry{left=18mm, right=18mm, top=22mm, bottom=22mm} % page is set to default values
+	\fancyhfoffset[L,O]{0pt} % header orientation fixed
+	% End of class settings
+	%%% Note to user:
+	% CTRL + F <CHANGE ME:> (without the angular brackets) in CKpreamble to specify graphics paths accordingly.
+	% The command \circled[]{} accepts one optional and one mandatory argument.
+	% Optional argument is for the size of the circle and mandatory argument is for its contents.
+	% \circled{A} produces circled A, with size drawn for letter A. \circled[TT]{A} produces circled A with size drawn for TT.
+	% https://github.com/CalvinKent/My-LaTeX
+	%%%
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	%%%                        CUSTOM MACRO VIM-TEX                             %%%
+	%%       call IMAP('NOM', '\nomenclature{}', 'tex')               
+
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+	% Crowdmark assignment start
+	% qnumber, qname, points
+\maketitle
+	\section{Topic}
+  \begin{align*}
+    \text{\it{What does it mean to be a native speaker of a particular language?}}
+  \end{align*}
+
+  \section{Part A - Brainstorm}
+  To assist in your brainstorming process, you can think about the following questions, however, what you choose to
+  articulate on is not necessarily confined to these questions. To be more precise in our questions, suppose
+  that we specifically analyse the English language, and ask the question of what it means to be a 
+  native English speaker, 
+  \begin{itemize}
+    \item Do you \textit{have} to be born in an English speaking country?
+    \item Is it age sensitive?
+    \item Is it time sensitive? Meaning is there a certain prescribed period for which one can develop a native
+      ability to retain English.
+    \item Does it depend on whether or not your parents are native English speakers?
+    \item Does it depend on whether or not your siblings are native English speakers?
+    \item Does it depend on whether or not English was the official language throughout your educational upbringing?
+    \item Does it depend on whether or not your friends spoke English?
+    \item Must we judge native speakers based on their accent?
+    \item Must we judge native speakers based on their style of speech? (Meaning, certain phrases that they use
+      that are usually only understood amongst a certain set of people sharing that language)
+    \item Must we judge native speakers based on their literacy skills?
+  \end{itemize}
+
+  \newpage
+
+  \section{Part B - Rough Draft \& Peer Edit}
+  After having brainstormed on a handful of the aforementioned questions, or perhaps questions you have come up with on
+  your own, construct a rough draft of your essay and have it peer edited by a classmate.
+
+  \section{Part C - Final Draft}
+  When you feel like you are ready to formalize your rough draft, \textbf{type} out your final draft. The editor
+  you choose to use is up to your preference, you can use \LaTeX if you like (of course there would be no
+  bonus points for having done so) or you can use Microsoft Word. In either case, you are required to meet
+  following criteria,
+  \begin{itemize}
+    \item Font size of 13.
+    \item Double Spaced.
+  \end{itemize}
+
+  \section{Part D - Final Submission}
+  Your final submission must include \textbf{both} the \textit{edited} rough draft as well as the final draft. The
+  edited rough draft \textbf{must} include a signature of the person who edited the draft.
+
+
+
+
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

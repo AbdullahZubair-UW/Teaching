@@ -1,0 +1,190 @@
+% Prepared by Calvin Kent
+% Prepared by Calvin Kent
+%
+% Lecture Template v19.02
+%
+%%% 201901/MATHxxx/Notes
+%
+\documentclass[12pt,oneside]{book} %
+\usepackage{CKpreamble}
+\usepackage{CKlecture}
+\usepackage{mdframed}
+\usepackage{import}
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{xcolor}
+
+\newcommand{\incfig}[2][1]{%
+    \def\svgwidth{#1\columnwidth}
+    \import{./figures/}{#2.pdf_tex}
+}
+
+\pdfsuppresswarningpagegroup=1
+
+%
+\renewcommand*{\doctitle}{Class Based Lecture Notes}
+\makeatletter\patchcmd{\chapter}{\if@openright\cleardoublepage\else\clearpage\fi}{}{}{}\makeatother % only used in class based
+\begin{document}
+	% Start of Class settings
+	\renewcommand*{\term}{Term 2} % Term
+	\renewcommand*{\coursecode}{MCR3U} % Course code
+	\renewcommand*{\thelecnum}{2} % Course code
+	\renewcommand*{\coursename}{Course Name} % Full course name
+	\renewcommand*{\profname}{Prof Name} % Prof Name
+	\renewcommand*{\colink}{http://www.student.math.uwaterloo.ca/~c2kent} % Course outline link
+	% End of Class settings
+	\clearpage
+	\pagenumbering{arabic}
+	%%% Note to user: CTRL + F <CHANGE ME:> (without the angular brackets) in CKpreamble to specify graphics paths accordingly.
+	%%% If a new chapter was started in the middle of a lecture, \fixchap{Second Chapter} must be used immediately above the next lecture.
+	% Course notes start
+\setchap{2}{Graphing Linear equations}
+\begin{lec}{November 2021}
+	\begin{center}
+		\Huge{\underline{\textbf{How to Graph Linear Equations}}}
+	\end{center}
+
+	\vspace*{0.5cm}
+
+	\begin{mdframed}
+		\begin{defn}
+			An equation is \textbf{linear} if it looks like
+			\[
+						y = mx+ b
+			.\] 
+			Where $m,b$ are real numbers and $x,y$ are variables.
+		\end{defn}
+	\end{mdframed}
+	\begin{ex}
+		Here are some examples of linear equations,
+		\begin{enumerate}
+			\item $y = 2x + 4$
+			\item $y = 3$
+			\item $y = \frac{-2}{3}x + 7$
+		\end{enumerate}
+	\end{ex}
+	\begin{ex}
+		The following are examples of non-linear graphs.
+		\begin{enumerate}
+			\item $y = x^2 + 2x + 4$
+			\item $y^2 + x^2 = 4$ (What is this?)
+		\end{enumerate}
+	\end{ex}
+	We are often interested about how linear equations look like geometrically on a \emph{Cartesian Plot}, we call these plots the
+	\emph{graph} of the linear equation.
+	\begin{ex}
+		Here are what the graphs of the linear equations from Example 2.1 look like. \textbf{(In class)}
+	\end{ex}
+
+
+	\begin{mdframed}
+		\begin{defn}
+			The \textbf{slope} of a linear equation is a measure of how 'steep' its graph is. The slope is given by the number $m$ in $y = mx + b$.
+		\end{defn}
+	\end{mdframed}
+	We say that larger values of $m$ correspond to graphs that have very steep slopes.\\
+	\textbf{(Class explanation)}
+	\begin{ex}
+		What were the slopes of the linear equations from Example 2.1? \textbf{(In class)}
+	\end{ex}
+
+	\vspace*{0.2cm}
+
+
+	\begin{mdframed}
+		\begin{defn}
+			The \textbf{y-intercept} of a liner equation is the point where the graph intersects the y-axis. This point is given by the
+			number $b$ in $y = mx + b$.
+		\end{defn}
+	\end{mdframed}
+
+	\begin{ex}
+		What were the y-intercept's of the linear equations from Example 2.1?\\ \textbf{(In class)}
+	\end{ex}
+
+	At this point we would like to answer the following question, if I give you a liner equation $y = mx + b$, can you plot its
+	graph? We can! by using the following procedure,
+	\newpage
+
+	\begin{proc}
+		Graphing Linear equations.
+		\begin{enumerate}
+			\item Identify the slope and the y-intercept.
+			\item Label the y-intercept on the y-axis.
+			\item Remeber that, \[
+								\text{slope} = \frac{\text{rise}}{\text{run}}
+			.\] Starting from the y-intercept go up by 'rise' units and go to the right by 'run' units. (Remeber that a negative 'rise' means go down and a
+			negative 'run' means go left).
+			\item Label the point where you end up at.
+			\item Draw a straight line through the two points you have labelled.
+			\item Finish by labelling the graph and drawing the tip arrows.
+		\end{enumerate}
+	\end{proc}
+
+	\begin{ex}
+		Graph the following linear equations. \textbf{(In class)}
+		\begin{enumerate}
+			\item $y = -2x + 6$
+			\item $y = \frac{-2}{3}x - 1$
+			\item $y = \frac{1}{-2}x$
+		\end{enumerate}
+	\end{ex}
+
+	\begin{mdframed}
+		\begin{defn}
+			The \textbf{x-intercept} of a liner equation is the point where the graph intersects the x-axis. This point is given by the
+			 solution to $0 = mx + b$. (Solving for $x $)
+		\end{defn}
+	\end{mdframed}
+
+	\begin{ex}
+		Determine the x-intercepts of the following linear equations.\textbf{(In class)}
+		\begin{enumerate}
+			\item $y = 2x - 3$
+			\item $y = \frac{-2}{5}x + 2$
+			\item $y = 5x$
+			\item $y = 3$
+		\end{enumerate}
+	\end{ex}
+
+	\end{lec}
+
+\end{document}
+%\fixchap{Second Chapter}
+%	\begin{figure}[H]
+%	\centering
+%	\includegraphics[width=0.75\linewidth]{p}
+%	\caption{caption.\label{fig:}}
+%	\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
